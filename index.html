@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <title>Shella</title>
+</head>
+
+<body>
+   <main id="main">
+      <header class="header">
+
+         <div class="header-top">
+            <p class="header-top__text top-text"> <span> Final Clearance:</span> Take 20% off ‘Sale Must-Haves'</p>
+            <button class="header-top__btn top-btn">
+               <span></span>
+            </button>
+         </div>
+
+         <div class="header-body">
+            <div class="container">
+               <div class="header-main">
+                  <!-- <span></span> -->
+                  <div class="header-main__logo logo">
+                     <a href="#" title="Logo">
+                        <svg class="icon-logo" viewBox="0 0 64 27">
+                           <use xlink:href="sprite.svg#logo"></use>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="header-main__icons">
+
+                     <form name="search" class="search__form" action="/" method="post">
+                        <input placeholder="Search products..." class="search__input" type="text">
+                        <button type="button" class="close__btn">✖</button>
+                        <button type="button" class="search__btn">
+                           <a href="#" title="search" class="icon-search__link">
+                              <svg class="icon-search header-icon" viewBox="0 0 17 17">
+                                 <use xlink:href="sprite.svg#search"></use>
+                              </svg>
+                           </a>
+                        </button>
+                     </form>
+
+                     <a href="#" title="Client service">
+                        <svg class="icon-question header-icon" viewBox="0 0 18 18">
+                           <use xlink:href="sprite.svg#question"></use>
+                        </svg>
+                     </a>
+                     <a href="#" title="Personal Area">
+                        <svg class="icon-person header-icon" viewBox="0 0 18 18">
+                           <use xlink:href="sprite.svg#person"></use>
+                        </svg>
+                     </a>
+                     <a href="#" title="liked product">
+                        <svg class="icon-heart header-icon" viewBox="0 0 18 18">
+                           <use xlink:href="sprite.svg#icon-heart-o"></use>
+                        </svg>
+                     </a>
+                     <a href="#" title="selected product">
+                        <svg class="icon-bag header-icon" viewBox="0 0 18 18">
+                           <use xlink:href="sprite.svg#icon-shopping-bag1"></use>
+                        </svg>
+                        <span class="header-main__icons_span">Bag()</span>
+                     </a>
+
+                     <label class=" header-main__options options">
+                        <select name="currency" id="currency" class="select">
+                           <option value="uah">UA(₴)</option>
+                           <option value="eur">EU(€)</option>
+                           <option value="usd">US($)</option>
+                        </select>
+                     </label>
+
+                  </div>
+               </div>
+            </div>
+
+            <div class="header-bottom">
+               <div class="container">
+                  <div class="header__burger">
+                     <span></span>
+                  </div>
+
+
+                  <nav class="nav">
+                     <ul class="nav__list">
+                        <li class="nav__item nav__item_not">
+                           <a href="#" class="nav__link">Layouts
+                              <svg class="icon-caret-down" viewBox="0 0 8 6">
+                                 <use xlink:href="sprite.svg#caret-down"></use>
+                              </svg>
+                           </a>
+                           <ul class="dropdown">
+                              <li class="dropdown__collection">
+                                 <ul>
+                                    <li><a class="dropdown__link dropdown__link_title" href="#">Collection LAYOUTS</a>
+                                    </li>
+                                    <li><a class="dropdown__link" href="#">List collections
+                                          V1</a></li>
+                                    <li><a class="dropdown__link" href="#">List collections
+                                          V2</a></li>
+                                    <li><a class="dropdown__link" href="#">sidebar + Banner</a></li>
+                                    <li><a class="dropdown__link" href="#">Left sidebar</a></li>
+                                    <li><a class="dropdown__link" href="#">Right sidebar</a></li>
+                                    <li><a class="dropdown__link" href="#">Without sidebar</a></li>
+                                    <li><a class="dropdown__link" href="#">Without sidebar + Banner</a></li>
+                                    <li><a class="dropdown__link" href="#">LookBook V1</a></li>
+                                    <li><a class="dropdown__link" href="#">LooKBook V2</a></li>
+                                    <li><a class="dropdown__link" href="#">Catalog mode</a></li>
+                                 </ul>
+                              </li>
+
+                              <li class="dropdown__product">
+                                 <ul>
+                                    <li><a class="dropdown__link dropdown__link_title" href="#">Single product
+                                          layouts</a></li>
+                                    <li><a class="dropdown__link" href="#">product V1 — Classic</a></li>
+                                    <li><a class="dropdown__link" href="#">product V2 — Classic</a></li>
+                                    <li><a class="dropdown__link" href="#">Product V3 — Classic Small</a></li>
+                                    <li><a class="dropdown__link" href="#">product V3 — strip</a></li>
+                                    <li><a class="dropdown__link" href="#">product V4 — Grid</a></li>
+                                    <li><a class="dropdown__link" href="#">Product V6 — Slider</a></li>
+                                    <li><a class="dropdown__link" href="#">Without sidebar + Banner</a></li>
+                                 </ul>
+                              </li>
+
+                              <li class="dropdown__options">
+                                 <ul>
+                                    <li><a class="dropdown__link dropdown__link_title" href="#">Product options</a></li>
+                                    <li><a class="dropdown__link" href="#">color</a></li>
+                                    <li><a class="dropdown__link" href="#">image, image</a></li>
+                                    <li><a class="dropdown__link" href="#">color, text, image</a></li>
+                                    <li><a class="dropdown__link" href="#">text1, text2, text3</a></li>
+                                    <li><a class="dropdown__link" href="#">image, image, image</a></li>
+                                    <li><a class="dropdown__link" href="#">On listing</a></li>
+                                 </ul>
+                              </li>
+
+                              <li class="dropdown__feature">
+                                 <ul>
+                                    <li><a class="dropdown__link dropdown__link_title" href="#">Featured products</a>
+                                    </li>
+                                    <li class="dropdown-card">
+                                       <div class="dropdown__card card">
+                                          <a href=""> <img class="card__img" src="./img/T-shirt-woman.jpg"
+                                                srcset="./img/T-shirt-woman-md.jpg 128w"
+                                                sizes="(max-width: 820px) 128px, 170px" alt="T-shirt-woman"></a>
+                                          <p class="card__text">Ecotton Pepsi</p>
+                                          <p class="card__price">$32</p>
+                                       </div>
+                                       <div class="dropdown__card card">
+                                          <a href=""> <img class="card__img" src="./img/T-shirt-man.jpg"
+                                                srcset="./img/T-shirt-man-md.jpg 128w"
+                                                sizes="(max-width: 820px) 128px, 170px" alt="T-shirt-man"></a>
+                                          <p class="card__text">Ecotton Pepsi T-shirt</p>
+                                          <p class="card__price">$32</p>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+
+                              <li class="dropdown__brands ">
+                                 <ul>
+                                    <li><a class="dropdown__link dropdown__link_title" href="#">Product options</a></li>
+                                    <li>
+                                       <div class="dropdown__box">
+                                          <a class="dropdown__link" href="#">
+                                             <svg class="brand" viewBox="0 0 80 80">
+                                                <use xlink:href="sprite.svg#brand1"></use>
+                                             </svg>
+                                          </a>
+
+                                          <a class="dropdown__link" href="#">
+                                             <svg class="brand" viewBox="0 0 80 80">
+                                                <use xlink:href="sprite.svg#brand2"></use>
+                                             </svg>
+                                          </a>
+
+                                          <a class="dropdown__link" href="#">
+                                             <svg class="brand" viewBox="0 0 80 80">
+                                                <use xlink:href="sprite.svg#brand3"></use>
+                                             </svg>
+                                          </a>
+
+                                          <a class="dropdown__link" href="#">
+                                             <svg class="brand" viewBox="0 0 80 80">
+                                                <use xlink:href="sprite.svg#brand4"></use>
+                                             </svg>
+                                          </a>
+
+                                          <a class="dropdown__link" href="#">
+                                             <svg class="brand" viewBox="0 0 80 80">
+                                                <use xlink:href="sprite.svg#brand5"></use>
+                                             </svg>
+                                          </a>
+
+                                          <a class="dropdown__link" href="#">
+                                             <svg class="brand " viewBox="0 0 80 80">
+                                                <use xlink:href="sprite.svg#brand6"></use>
+                                             </svg>
+                                          </a>
+
+                                       </div>
+                                 </ul>
+                              </li>
+
+                           </ul>
+                        </li>
+
+                        <li class="nav__item">
+                           <a href="#" class="nav__link">Shop
+                              <svg class="icon-caret-down" viewBox="0 0 8 6">
+                                 <use xlink:href="sprite.svg#caret-down"></use>
+                              </svg>
+                           </a>
+                           <ul class="dropdown">
+                              <li><a class="dropdown__link" href="#">link 1</a></li>
+                              <li><a class="dropdown__link" href="#">link 2</a></li>
+                              <li><a class="dropdown__link" href="#">link 3</a></li>
+                              <li><a class="dropdown__link" href="#">link 4</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav__item">
+                           <a href="#" class="nav__link">Blog
+                              <svg class="icon-caret-down" viewBox="0 0 8 6">
+                                 <use xlink:href="sprite.svg#caret-down"></use>
+                              </svg>
+                           </a>
+                           <ul class="dropdown">
+                              <li><a class="dropdown__link" href="#">link 1</a></li>
+                              <li><a class="dropdown__link" href="#">link 2</a></li>
+                              <li><a class="dropdown__link" href="#">link 3</a></li>
+                              <li><a class="dropdown__link" href="#">link 4</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav__item">
+                           <a href="#" class="nav__link">Gallery
+                              <svg class="icon-caret-down" viewBox="0 0 8 6">
+                                 <use xlink:href="sprite.svg#caret-down"></use>
+                              </svg>
+                           </a>
+                           <ul class="dropdown">
+                              <li><a class="dropdown__link" href="#">link 1</a></li>
+                              <li><a class="dropdown__link" href="#">link 2</a></li>
+                              <li><a class="dropdown__link" href="#">link 3</a></li>
+                              <li><a class="dropdown__link" href="#">link 4</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav__item">
+                           <a href="#" class="nav__link">Pages
+                              <svg class="icon-caret-down" viewBox="0 0 8 6">
+                                 <use xlink:href="sprite.svg#caret-down"></use>
+                              </svg>
+                           </a>
+                           <ul class="dropdown">
+                              <li><a class="dropdown__link" href="#">link 1</a></li>
+                              <li><a class="dropdown__link" href="#">link 2</a></li>
+                              <li><a class="dropdown__link" href="#">link 3</a></li>
+                              <li><a class="dropdown__link" href="#">link 4</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav__item">
+                           <a href="#" class="nav__link">Woman's
+                              <svg class="icon-caret-down" viewBox="0 0 8 6">
+                                 <use xlink:href="sprite.svg#caret-down"></use>
+                              </svg>
+                           </a>
+                           <ul class="dropdown">
+                              <li><a class="dropdown__link" href="#">link 1</a></li>
+                              <li><a class="dropdown__link" href="#">link 2</a></li>
+                              <li><a class="dropdown__link" href="#">link 3</a></li>
+                              <li><a class="dropdown__link" href="#">link 4</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav__item">
+                           <a href="#" class="nav__link">Man's
+                              <svg class="icon-caret-down" viewBox="0 0 8 6">
+                                 <use xlink:href="sprite.svg#caret-down"></use>
+                              </svg>
+                           </a>
+                           <ul class="dropdown">
+                              <li><a class="dropdown__link" href="#">link 1</a></li>
+                              <li><a class="dropdown__link" href="#">link 2</a></li>
+                              <li><a class="dropdown__link" href="#">link 3</a></li>
+                              <li><a class="dropdown__link" href="#">link 4</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+
+
+      </header>
+
+      <section id="grid">
+         <div class="container">
+            <div class="grid-body">
+
+               <div class="grid-body__page">
+                  <h1 class="grid-body__title">Final clearance</h1>
+                  <p class="grid-body__text">Take 20% off ‘Sale Must-Haves'</p>
+                  <button type="button" class="grid-body__btn">Discover More</button>
+               </div>
+
+               <div class="grid-body__item item-grid item-pants">
+                  <a href="">
+                     <img class="item-grid__img img-midlle" src="./img/Pants.jpg"
+                        srcset="./img/Pants-md.jpg 578w, ./img/Pants-sm.jpg 386w "
+                        sizes="(max-width: 420px) 386px, (max-width: 790px) 578px, 770px" alt="Pants & T-shirts">
+                  </a>
+                  <div class="item-grid__item-info">
+
+                     <p class="item-grid__subtitle"><a href="">40% OFF ALL Pants and t-shirts</a></p>
+
+                     <button type="button" class="item-grid__button">Discover More</button>
+                  </div>
+               </div>
+
+               <div class="grid-body__item  item-grid item-accessories">
+                  <a href="">
+                     <img class="item-grid__img img-midlle" src="./img/accessories.jpg"
+                        srcset="./img/accessories-md.jpg 578w, ./img/accessories-sm.jpg 386w "
+                        sizes="(max-width: 420px) 386px, (max-width: 790px) 578px, 770px" alt="Pants & T-shirts">
+                  </a>
+                  <div class="item-grid__item-info">
+                     <p class="item-grid__subtitle"><a href="">NEW-SEASON ACCESSORIES</a>
+                     </p>
+                     <button type="button" class="item-grid__button">Discover More</button>
+                  </div>
+               </div>
+
+               <div class="grid-body__page page-second">
+                  <h2 class="grid-body__title">New season</h2>
+                  <p class="grid-body__text">New arrivals are here!</p>
+                  <button type="button" class="grid-body__btn">Discover More</button>
+               </div>
+
+               <div class="grid-body__item item-grid item-vacation">
+                  <a href="">
+                     <img class="item-grid__img" src="./img/vacation.jpg"
+                        srcset="./img/vacation-md.jpg 278w, ./img/vacation-sm.jpg 186w "
+                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                  </a>
+                  <div class="item-grid__item-info">
+                     <p class="item-grid__subtitle"><a href="">The Vacation Shop</a>
+                     </p>
+                     <button type="button" class="item-grid__button">Discover More</button>
+                  </div>
+               </div>
+
+               <div class="grid-body__item item-grid item-bomber">
+                  <a href="">
+                     <img class="item-grid__img img-midlle" src="./img/bomber.jpg"
+                        srcset="./img/bomber-md.jpg 578w, ./img/bomber-sm.jpg 386w "
+                        sizes="(max-width: 420px) 386px, (max-width: 790px) 578px, 770px" alt="bomber">
+                  </a>
+                  <div class="item-grid__item-info">
+                     <p class="item-grid__subtitle"><a href="">This season's bomber jackets</a> </p>
+                     <button type="button" class="item-grid__button">Discover More</button>
+                  </div>
+               </div>
+
+               <div class="grid-body__page page-third">
+                  <h2 class="grid-body__title">TOUCH
+                     OF COLOR</h2>
+                  <p class="grid-body__text">Essential styles come alive in bright colours.</p>
+                  <button type="button" class="grid-body__btn">Discover More</button>
+               </div>
+
+               <div class="grid-body__item item-grid item-model">
+                  <a href="">
+                     <img class="item-grid__img" src="./img/model.jpg"
+                        srcset="./img/model-md.jpg 278w, ./img/model-sm.jpg 186w "
+                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                  </a>
+                  <div class="item-grid__item-info">
+                     <p class="item-grid__subtitle"><a href="">NEW ICONIC MODEL</a>
+                     </p>
+                     <button type="button" class="item-grid__button">Discover More</button>
+                  </div>
+               </div>
+
+               <div class="grid-body__item item-grid item-skirts">
+                  <a href="">
+                     <img class="item-grid__img" src="./img/skirts.jpg"
+                        srcset="./img/skirts-md.jpg 278w, ./img/skirts-sm.jpg 186w "
+                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                  </a>
+                  <div class="item-grid__item-info">
+                     <p class="item-grid__subtitle"><a href="">'90s LOVE: THE DENIM SKIRT</a>
+                     </p>
+                     <button type="button" class="item-grid__button">Discover More</button>
+                  </div>
+               </div>
+
+               <div class="grid-body__item item-grid item-all">
+                  <a href="">
+                     <img class="item-grid__img" src="./img/all.jpg"
+                        srcset="./img/all-md.jpg 278w, ./img/all-sm.jpg 186w "
+                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                  </a>
+                  <div class="item-grid__item-info">
+                     <p class="item-grid__subtitle"><a href="">40% OFF ALL</a>
+                     </p>
+                     <button type="button" class="item-grid__button">Discover More</button>
+                  </div>
+               </div>
+
+
+            </div>
+         </div>
+      </section>
+
+
+
+
+   </main>
+
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="./script.js"></script>
+</body>
+
+</html>
