@@ -8,14 +8,16 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+
+   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+   <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+   <link rel="stylesheet" href="./src/style.css">
    <title>Shella</title>
 </head>
 
 <body>
-   <main id="main">
+   <div class="wrapper">
       <header class="header">
-
          <div class="header-top">
             <p class="header-top__text top-text"> <span> Final Clearance:</span> Take 20% off ‘Sale Must-Haves'</p>
             <button class="header-top__btn top-btn">
@@ -24,7 +26,7 @@
          </div>
 
          <div class="header-body">
-            <div class="container">
+            <div class="header-body__container">
                <div class="header-main">
                   <!-- <span></span> -->
                   <div class="header-main__logo logo">
@@ -83,12 +85,10 @@
             </div>
 
             <div class="header-bottom">
-               <div class="container">
+               <div class="header-bottom__container">
                   <div class="header__burger">
                      <span></span>
                   </div>
-
-
                   <nav class="nav">
                      <ul class="nav__list">
                         <li class="nav__item nav__item_not">
@@ -148,19 +148,21 @@
                                     <li><a class="dropdown__link dropdown__link_title" href="#">Featured products</a>
                                     </li>
                                     <li class="dropdown-card">
-                                       <div class="dropdown__card card">
-                                          <a href=""> <img class="card__img" src="./img/T-shirt-woman.jpg"
+                                       <div class="dropdown__card card-dropdown">
+                                          <a href="">
+                                             <img class="card-dropdown__img" src="./img/T-shirt-woman.jpg"
                                                 srcset="./img/T-shirt-woman-md.jpg 128w"
-                                                sizes="(max-width: 820px) 128px, 170px" alt="T-shirt-woman"></a>
-                                          <p class="card__text">Ecotton Pepsi</p>
-                                          <p class="card__price">$32</p>
+                                                sizes="(max-width: 820px) 128px, 170px" alt="T-shirt-woman">
+                                          </a>
+                                          <p class="card-dropdown__text">Ecotton Pepsi</p>
+                                          <p class="card-dropdown__price">$32</p>
                                        </div>
-                                       <div class="dropdown__card card">
-                                          <a href=""> <img class="card__img" src="./img/T-shirt-man.jpg"
+                                       <div class="dropdown__card card-dropdown">
+                                          <a href=""> <img class="card-dropdown__img" src="./img/T-shirt-man.jpg"
                                                 srcset="./img/T-shirt-man-md.jpg 128w"
                                                 sizes="(max-width: 820px) 128px, 170px" alt="T-shirt-man"></a>
-                                          <p class="card__text">Ecotton Pepsi T-shirt</p>
-                                          <p class="card__price">$32</p>
+                                          <p class="card-dropdown__text">Ecotton Pepsi T-shirt</p>
+                                          <p class="card-dropdown__price">$32</p>
                                        </div>
                                     </li>
                                  </ul>
@@ -297,137 +299,663 @@
                </div>
             </div>
          </div>
-
-
       </header>
 
-      <section id="grid">
-         <div class="container">
-            <div class="grid-body">
+      <main class="main">
 
-               <div class="grid-body__page">
-                  <h1 class="grid-body__title">Final clearance</h1>
-                  <p class="grid-body__text">Take 20% off ‘Sale Must-Haves'</p>
-                  <button type="button" class="grid-body__btn">Discover More</button>
-               </div>
+         <!--------section grid---------->
 
-               <div class="grid-body__item item-grid item-pants">
-                  <a href="">
-                     <img class="item-grid__img img-midlle" src="./img/Pants.jpg"
-                        srcset="./img/Pants-md.jpg 578w, ./img/Pants-sm.jpg 386w "
-                        sizes="(max-width: 420px) 386px, (max-width: 790px) 578px, 770px" alt="Pants & T-shirts">
-                  </a>
-                  <div class="item-grid__item-info">
+         <section id="grid">
+            <div class="grid__container">
+               <div class="grid-body">
 
-                     <p class="item-grid__subtitle"><a href="">40% OFF ALL Pants and t-shirts</a></p>
+                  <div class="grid-body__page main-page">
+                     <picture>
+                        <source media="(min-width:820px)" srcset="./img/Banner.jpg">
+                        <source media="(min-width:580px)" srcset="./img/Banner820.jpg">
+                        <source media="(min-width:380px)" srcset="./img/Banner580.jpg">
+                        <source media="(max-width:380px)" srcset="./img/Banner430.jpg">
+                        <img class="grid-body__page_img" src="./img/Banner.jpg" alt="big image">
+                     </picture>
 
-                     <button type="button" class="item-grid__button">Discover More</button>
+                     <div class="grid-body__page_block block-main">
+                        <h1 class="grid-body__title">Final <br> clearance</h1>
+                        <p class="grid-body__text">Take 20% Off ‘Sale Must-Haves'</p>
+                        <button type="button" class="grid-body__btn">Discover More</button>
+                     </div>
+
                   </div>
-               </div>
 
-               <div class="grid-body__item  item-grid item-accessories">
-                  <a href="">
-                     <img class="item-grid__img img-midlle" src="./img/accessories.jpg"
-                        srcset="./img/accessories-md.jpg 578w, ./img/accessories-sm.jpg 386w "
-                        sizes="(max-width: 420px) 386px, (max-width: 790px) 578px, 770px" alt="Pants & T-shirts">
+                  <div class="grid-body__item item-grid item-pants">
+                     <a href="">
+                        <img class="item-grid__img" src="./img/Pants.jpg"
+                           srcset="./img/Pants-md.jpg 578w, ./img/Pants-sm.jpg 386w "
+                           sizes="(max-width: 380px) 386px, (max-width: 580px) 578px, 770px" alt="Pants & T-shirts">
+                     </a>
+                     <div class="item-grid__item-info">
+
+                        <p class="item-grid__subtitle"><a href="">40% OFF ALL Pants and t-shirts</a></p>
+
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__item  item-grid item-accessories">
+                     <a href="">
+                        <img class="item-grid__img img-midlle" src="./img/accessories.jpg"
+                           srcset="./img/accessories-md.jpg 278w, ./img/accessories-sm.jpg 185w "
+                           sizes="(max-width: 790px) 278px, 370px" alt="accessories">
+                     </a>
+                     <div class="item-grid__item-info">
+                        <p class="item-grid__subtitle"><a href="">NEW-SEASON ACCESSORIES</a>
+                        </p>
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__page page-second">
+                     <picture>
+                        <source media="(min-width:820px)" srcset="./img/Banner-second.jpg">
+                        <source media="(min-width:580px)" srcset="./img/Banner-second820.jpg">
+                        <source media="(min-width:380px)" srcset="./img/Banner-second580.jpg">
+                        <source media="(max-width:380px)" srcset="./img/Banner-second430.jpg">
+                        <img class="grid-body__page_img" src="./img/Banner-second.jpg" alt="big image">
+                     </picture>
+
+                     <div class="grid-body__page_block block-second">
+                        <h2 class="grid-body__title">New <br> season</h2>
+                        <p class="grid-body__text">New arrivals are here!</p>
+                        <button type="button" class="grid-body__btn">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__item item-grid item-vacation">
+                     <a href="">
+                        <img class="item-grid__img" src="./img/vacation.jpg"
+                           srcset="./img/vacation-md.jpg 278w, ./img/vacation-sm.jpg 186w "
+                           sizes=" (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                     </a>
+                     <div class="item-grid__item-info">
+                        <p class="item-grid__subtitle"><a href="">The Vacation Shop</a>
+                        </p>
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__item item-grid item-bomber">
+                     <a href="">
+                        <img class="item-grid__img img-midlle" src="./img/bomber.jpg"
+                           srcset="./img/bomber-md.jpg 578w, ./img/bomber-sm.jpg 386w "
+                           sizes="(max-width: 380px) 386px, (max-width: 580px) 578px, 770px" alt="bomber">
+                     </a>
+                     <div class="item-grid__item-info">
+                        <p class="item-grid__subtitle"><a href="">This season's bomber jackets</a> </p>
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__page page-third">
+                     <picture>
+                        <source media="(min-width:820px)" srcset="./img/Banner-third.jpg">
+                        <source media="(min-width:580px)" srcset="./img/Banner-third820.jpg">
+                        <source media="(min-width:380px)" srcset="./img/Banner-third580.jpg">
+                        <source media="(max-width:380px)" srcset="./img/Banner-third430.jpg">
+                        <img class="grid-body__page_img" src="./img/Banner-third.jpg" alt="big image">
+                     </picture>
+
+                     <div class="grid-body__page_block block-third">
+                        <h2 class="grid-body__title">TOUCH <br>
+                           OF COLOR</h2>
+                        <p class="grid-body__text">Essential styles come alive in bright colours.</p>
+                        <button type="button" class="grid-body__btn">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__item item-grid item-model">
+                     <a href="">
+                        <img class="item-grid__img" src="./img/model.jpg"
+                           srcset="./img/model-md.jpg 278w, ./img/model-sm.jpg 186w "
+                           sizes="(max-width: 790px) 278px, 370px" alt="NEW ICONIC MODEL">
+                     </a>
+                     <div class="item-grid__item-info">
+                        <p class="item-grid__subtitle"><a href="">NEW ICONIC MODEL</a>
+                        </p>
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__item item-grid item-skirts">
+                     <a href="">
+                        <img class="item-grid__img" src="./img/skirts.jpg"
+                           srcset="./img/skirts-md.jpg 278w, ./img/skirts-sm.jpg 186w "
+                           sizes="(max-width: 790px) 278px, 370px" alt="THE DENIM SKIRT">
+                     </a>
+                     <div class="item-grid__item-info">
+                        <p class="item-grid__subtitle"><a href="">'90s LOVE: THE DENIM SKIRT</a>
+                        </p>
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__item item-grid item-all">
+                     <a href="">
+                        <img class="item-grid__img" src="./img/all.jpg"
+                           srcset="./img/all-md.jpg 278w, ./img/all-sm.jpg 186w "
+                           sizes="(max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                     </a>
+                     <div class="item-grid__item-info">
+                        <p class="item-grid__subtitle"><a href="">40% OFF ALL</a>
+                        </p>
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+                  <div class="grid-body__item item-grid item-model item-hidden">
+                     <a href="">
+                        <img class="item-grid__img" src="./img/model.jpg"
+                           srcset="./img/model-md.jpg 278w, ./img/model-sm.jpg 186w "
+                           sizes="(max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                     </a>
+                     <div class="item-grid__item-info">
+                        <p class="item-grid__subtitle"><a href="">NEW ICONIC MODEL</a>
+                        </p>
+                        <button type="button" class="item-grid__button">Discover More</button>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+
+         <!--------section trending---------->
+
+         <section class="trending" id="trending">
+            <div class="trending__container">
+               <div class="trending__title title__slider">
+                  <h6>Trending Now</h6>
+               </div>
+               <div class="trending__slider">
+                  <div class="trending__slider_card card">
+                     <div class="card__img-box img-box">
+                        <img src="./img/image1.jpg" alt="clothes" class="img-card">
+                     </div>
+                     <div class="card__body card-body">
+                        <p class="card-body__product"><a href="">T -Shirts</a></p>
+                        <p class="card-body__brand"><a href="">Ecotton Pepsi T-shirt</a></p>
+                        <div class="card-body__price">$32</div>
+                        <div class="card-body__colors">
+                           <div class="card-body__colors_color color1"></div>
+                           <div class="card-body__colors_color color2"></div>
+                           <div class="card-body__colors_color color3"></div>
+                        </div>
+                        <div class="card-body__sizes">
+                           <div class="card-body__sizes_size size1">30</div>
+                           <div class="card-body__sizes_size size2">32</div>
+                           <div class="card-body__sizes_size size3">34</div>
+                           <div class="card-body__sizes_size size4">36</div>
+                           <div class="card-body__sizes_size size5">38</div>
+                           <div class="card-body__sizes_size size6">40</div>
+                           <div class="card-body__sizes_size size7">42</div>
+                        </div>
+                        <div class="card-body__box">
+                           <button class="card-body__box_btn card-btn">
+                              <svg class="card-btn__svg" width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M13.5625 17.4922C13.5104 17.5443 13.4518 17.5833 13.3867 17.6094C13.3346 17.6354 13.276 17.6484 13.2109 17.6484H0.710938C0.632812 17.6484 0.561198 17.6354 0.496094 17.6094C0.44401 17.5833 0.391927 17.5443 0.339844 17.4922C0.28776 17.4401 0.248698 17.388 0.222656 17.3359C0.196615 17.2708 0.183594 17.2057 0.183594 17.1406V4.64062C0.183594 4.5625 0.196615 4.4974 0.222656 4.44531C0.248698 4.38021 0.28776 4.32161 0.339844 4.26953C0.391927 4.21745 0.44401 4.17839 0.496094 4.15234C0.561198 4.1263 0.632812 4.11328 0.710938 4.11328H3.83594C3.83594 3.68359 3.90755 3.28646 4.05078 2.92188C4.20703 2.54427 4.44141 2.20573 4.75391 1.90625C5.05339 1.59375 5.38542 1.36589 5.75 1.22266C6.1276 1.06641 6.53125 0.988281 6.96094 0.988281C7.39062 0.988281 7.78776 1.06641 8.15234 1.22266C8.51693 1.36589 8.85547 1.59375 9.16797 1.90625C9.46745 2.21875 9.69531 2.55729 9.85156 2.92188C10.0078 3.28646 10.0859 3.68359 10.0859 4.11328H13.2109C13.276 4.11328 13.3346 4.1263 13.3867 4.15234C13.4518 4.17839 13.5104 4.21745 13.5625 4.26953C13.6146 4.32161 13.6536 4.38021 13.6797 4.44531C13.7057 4.4974 13.7188 4.5625 13.7188 4.64062V17.1406C13.7188 17.2057 13.7057 17.2708 13.6797 17.3359C13.6536 17.388 13.6146 17.4401 13.5625 17.4922ZM12.6836 5.14844H10.0859V7.23828C10.0859 7.30339 10.0729 7.36849 10.0469 7.43359C10.0208 7.4987 9.98177 7.55729 9.92969 7.60938C9.8776 7.66146 9.81901 7.70052 9.75391 7.72656C9.6888 7.7526 9.6237 7.76562 9.55859 7.76562C9.49349 7.76562 9.42839 7.7526 9.36328 7.72656C9.29818 7.70052 9.23958 7.66146 9.1875 7.60938C9.13542 7.55729 9.09635 7.4987 9.07031 7.43359C9.04427 7.36849 9.03125 7.30339 9.03125 7.23828V5.14844H4.87109V7.23828C4.87109 7.30339 4.85807 7.36849 4.83203 7.43359C4.80599 7.4987 4.76693 7.55729 4.71484 7.60938C4.66276 7.66146 4.60417 7.70052 4.53906 7.72656C4.48698 7.7526 4.42188 7.76562 4.34375 7.76562C4.27865 7.76562 4.21354 7.7526 4.14844 7.72656C4.09635 7.70052 4.04427 7.66146 3.99219 7.60938C3.9401 7.55729 3.90104 7.4987 3.875 7.43359C3.84896 7.36849 3.83594 7.30339 3.83594 7.23828V5.14844H1.21875V16.6133H12.6836V5.14844ZM5.47656 2.62891C5.28125 2.83724 5.13151 3.0651 5.02734 3.3125C4.92318 3.5599 4.87109 3.82682 4.87109 4.11328H9.03125C9.03125 3.82682 8.97917 3.5599 8.875 3.3125C8.78385 3.0651 8.63411 2.83724 8.42578 2.62891C8.21745 2.43359 7.98958 2.28385 7.74219 2.17969C7.50781 2.07552 7.2474 2.02344 6.96094 2.02344C6.66146 2.02344 6.38802 2.07552 6.14062 2.17969C5.90625 2.28385 5.6849 2.43359 5.47656 2.62891Z"
+                                    fill="#141414" />
+                              </svg>
+                              <span class="card-btn__text">Add to cart</span>
+                           </button>
+                           <a href="" class="card-body__box_select select">
+                              <svg class="select__svg" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.9102 3.75781C16.793 3.45833 16.6432 3.17839 16.4609 2.91797C16.2917 2.65755 16.0898 2.41667 15.8555 2.19531C15.6211 1.96094 15.3737 1.75911 15.1133 1.58984C14.8529 1.40755 14.5794 1.25781 14.293 1.14062C13.9935 1.02344 13.694 0.938802 13.3945 0.886719C13.0951 0.821615 12.7891 0.789062 12.4766 0.789062C12.1771 0.789062 11.8776 0.821615 11.5781 0.886719C11.2786 0.938802 10.9792 1.02344 10.6797 1.14062C10.3802 1.25781 10.1003 1.40755 9.83984 1.58984C9.57943 1.75911 9.33203 1.96094 9.09766 2.19531C9.08464 2.20833 9.07161 2.22786 9.05859 2.25391C9.04557 2.26693 9.03255 2.27995 9.01953 2.29297C9.00651 2.30599 8.99349 2.31901 8.98047 2.33203C8.96745 2.34505 8.94792 2.35807 8.92188 2.37109C8.90885 2.35807 8.89583 2.34505 8.88281 2.33203C8.86979 2.31901 8.85677 2.30599 8.84375 2.29297C8.83073 2.27995 8.81771 2.26693 8.80469 2.25391C8.79167 2.22786 8.77865 2.20833 8.76562 2.19531C8.53125 1.96094 8.28385 1.75911 8.02344 1.58984C7.76302 1.40755 7.48307 1.25781 7.18359 1.14062C6.88411 1.02344 6.58464 0.938802 6.28516 0.886719C5.98568 0.821615 5.67969 0.789062 5.36719 0.789062C5.06771 0.789062 4.76823 0.821615 4.46875 0.886719C4.16927 0.938802 3.86979 1.02344 3.57031 1.14062C3.28385 1.25781 3.00391 1.40755 2.73047 1.58984C2.47005 1.75911 2.22266 1.96094 1.98828 2.19531C1.76693 2.41667 1.5651 2.65755 1.38281 2.91797C1.21354 3.17839 1.07031 3.45833 0.953125 3.75781C0.835938 4.04427 0.744792 4.34375 0.679688 4.65625C0.627604 4.95573 0.601562 5.26172 0.601562 5.57422C0.601562 5.89974 0.627604 6.21875 0.679688 6.53125C0.744792 6.83073 0.835938 7.1237 0.953125 7.41016C1.07031 7.69661 1.21354 7.97005 1.38281 8.23047C1.5651 8.49089 1.76693 8.73828 1.98828 8.97266L8.55078 15.5156C8.55078 15.5286 8.55078 15.5352 8.55078 15.5352C8.5638 15.5352 8.57031 15.5352 8.57031 15.5352L8.92188 15.8867L9.29297 15.5352C9.30599 15.5221 9.3125 15.5156 9.3125 15.5156L15.8555 8.97266C16.0898 8.73828 16.2917 8.49089 16.4609 8.23047C16.6432 7.97005 16.793 7.69661 16.9102 7.41016C17.0273 7.1237 17.112 6.83073 17.1641 6.53125C17.2292 6.21875 17.2617 5.89974 17.2617 5.57422C17.2617 5.26172 17.2292 4.95573 17.1641 4.65625C17.112 4.34375 17.0273 4.04427 16.9102 3.75781ZM15.9336 7.01953C15.8424 7.24089 15.7253 7.45573 15.582 7.66406C15.4518 7.85938 15.3021 8.04167 15.1328 8.21094L8.92188 14.4219L2.73047 8.21094C2.5612 8.04167 2.40495 7.85938 2.26172 7.66406C2.13151 7.45573 2.02083 7.24089 1.92969 7.01953C1.82552 6.78516 1.7474 6.55078 1.69531 6.31641C1.65625 6.06901 1.63672 5.82161 1.63672 5.57422C1.63672 5.32682 1.65625 5.08594 1.69531 4.85156C1.7474 4.60417 1.82552 4.36979 1.92969 4.14844C2.02083 3.91406 2.13151 3.69922 2.26172 3.50391C2.40495 3.29557 2.5612 3.10026 2.73047 2.91797C2.91276 2.7487 3.10807 2.59896 3.31641 2.46875C3.52474 2.32552 3.74609 2.20833 3.98047 2.11719C4.20182 2.02604 4.42969 1.96094 4.66406 1.92188C4.89844 1.86979 5.13932 1.84375 5.38672 1.84375C5.62109 1.84375 5.85547 1.86979 6.08984 1.92188C6.32422 1.96094 6.55859 2.02604 6.79297 2.11719C7.02734 2.20833 7.24219 2.32552 7.4375 2.46875C7.64583 2.59896 7.84115 2.7487 8.02344 2.91797C8.0625 2.97005 8.10156 3.02214 8.14062 3.07422C8.19271 3.11328 8.23828 3.15885 8.27734 3.21094C8.31641 3.25 8.34896 3.29557 8.375 3.34766C8.41406 3.39974 8.45312 3.45182 8.49219 3.50391C8.54427 3.58203 8.60286 3.64062 8.66797 3.67969C8.74609 3.70573 8.83073 3.71875 8.92188 3.71875C9.02604 3.71875 9.11068 3.70573 9.17578 3.67969C9.25391 3.64062 9.31901 3.58203 9.37109 3.50391C9.39714 3.45182 9.42969 3.39974 9.46875 3.34766C9.50781 3.29557 9.54688 3.25 9.58594 3.21094C9.625 3.15885 9.66406 3.11328 9.70312 3.07422C9.75521 3.02214 9.80078 2.97005 9.83984 2.91797C10.0221 2.7487 10.2109 2.59896 10.4062 2.46875C10.6146 2.32552 10.8359 2.20833 11.0703 2.11719C11.3047 2.02604 11.5391 1.96094 11.7734 1.92188C12.0078 1.86979 12.2422 1.84375 12.4766 1.84375C12.7109 1.84375 12.9453 1.86979 13.1797 1.92188C13.4141 1.96094 13.6484 2.02604 13.8828 2.11719C14.1172 2.20833 14.3385 2.32552 14.5469 2.46875C14.7552 2.59896 14.9505 2.7487 15.1328 2.91797C15.3021 3.10026 15.4518 3.29557 15.582 3.50391C15.7253 3.69922 15.8424 3.91406 15.9336 4.14844C16.0247 4.36979 16.0964 4.60417 16.1484 4.85156C16.2005 5.08594 16.2266 5.32682 16.2266 5.57422C16.2266 5.82161 16.2005 6.06901 16.1484 6.31641C16.0964 6.55078 16.0247 6.78516 15.9336 7.01953Z"
+                                    fill="#141414" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card__footer">
+                        <div class="card__footer_stars">
+                           <svg class="stars" viewBox="0 0 96 17">
+                              <path
+                                 d="M6.13281 6.46094L8.125 0.695312L10 6.53125L16.0703 6.64844L11.125 10.1641L12.8828 16.0234L7.96094 12.4141L2.99219 15.8594L4.91406 10.0938L0.0625 6.41406L6.13281 6.46094ZM26.0528 6.46094L28.045 0.695312L29.92 6.53125L35.9903 6.64844L31.045 10.1641L32.8028 16.0234L27.8809 12.4141L22.9122 15.8594L24.8341 10.0938L19.9825 6.41406L26.0528 6.46094ZM45.9728 6.46094L47.965 0.695312L49.84 6.53125L55.9103 6.64844L50.965 10.1641L52.7228 16.0234L47.8009 12.4141L42.8322 15.8594L44.7541 10.0938L39.9025 6.41406L45.9728 6.46094ZM75.5725 6.48438L70.6272 10L72.385 15.8594L67.4866 12.2734L62.5178 15.6953L64.3694 10.0703V9.90625L59.5647 6.25L65.635 6.29688L67.6272 0.53125L69.5022 6.34375L75.5725 6.48438ZM68.1897 11.2891L70.2053 12.7656L69.2444 9.53125L71.9397 7.58594L68.635 7.53906L67.5803 4.30469V4.375V10.8438L68.1897 11.2891ZM87.4769 0.53125L89.3519 6.34375L95.4222 6.48438L90.4769 10L92.2347 15.8594L87.3363 12.2734L82.3675 15.6953L84.2659 9.92969L79.4144 6.25L85.4847 6.29688L87.4769 0.53125ZM87.4534 4.30469L86.6331 6.67188L86.3284 7.49219L83.0238 7.46875L85.6722 9.48438L84.6409 12.6719L87.3597 10.7734L90.055 12.7656L89.0941 9.53125L91.7894 7.58594L88.4847 7.53906L87.4534 4.30469Z"
+                                 fill="#141414" />
+                           </svg>
+                        </div>
+                        <span class="card__footer_reviews">Reviews (2)</span>
+                     </div>
+                  </div>
+
+                  <div class="trending__slider_card card">
+                     <div class="card__img-box img-box">
+                        <a href=""><img src="./img/image2.jpg" alt="clothes" class="img-card"></a>
+                     </div>
+                     <div class="card__body card-body">
+                        <p class="card-body__product"><a href="">T -Shirts</a></p>
+                        <p class="card-body__brand"><a href="">Ecotton Pepsi T-shirt</a></p>
+                        <div class="card-body__price">$32</div>
+                        <div class="card-body__colors">
+                           <div class="card-body__colors_color color1 color1-grey"></div>
+                           <div class="card-body__colors_color color2"></div>
+                           <div class="card-body__colors_color color3"></div>
+                        </div>
+                        <div class="card-body__sizes">
+                           <div class="card-body__sizes_size size1">30</div>
+                           <div class="card-body__sizes_size size2">32</div>
+                           <div class="card-body__sizes_size size3">34</div>
+                           <div class="card-body__sizes_size size4">36</div>
+                           <div class="card-body__sizes_size size5">38</div>
+                           <div class="card-body__sizes_size size6">40</div>
+                           <div class="card-body__sizes_size size7">42</div>
+                        </div>
+                        <div class="card-body__box">
+                           <button class="card-body__box_btn card-btn">
+                              <svg class="card-btn__svg" width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M13.5625 17.4922C13.5104 17.5443 13.4518 17.5833 13.3867 17.6094C13.3346 17.6354 13.276 17.6484 13.2109 17.6484H0.710938C0.632812 17.6484 0.561198 17.6354 0.496094 17.6094C0.44401 17.5833 0.391927 17.5443 0.339844 17.4922C0.28776 17.4401 0.248698 17.388 0.222656 17.3359C0.196615 17.2708 0.183594 17.2057 0.183594 17.1406V4.64062C0.183594 4.5625 0.196615 4.4974 0.222656 4.44531C0.248698 4.38021 0.28776 4.32161 0.339844 4.26953C0.391927 4.21745 0.44401 4.17839 0.496094 4.15234C0.561198 4.1263 0.632812 4.11328 0.710938 4.11328H3.83594C3.83594 3.68359 3.90755 3.28646 4.05078 2.92188C4.20703 2.54427 4.44141 2.20573 4.75391 1.90625C5.05339 1.59375 5.38542 1.36589 5.75 1.22266C6.1276 1.06641 6.53125 0.988281 6.96094 0.988281C7.39062 0.988281 7.78776 1.06641 8.15234 1.22266C8.51693 1.36589 8.85547 1.59375 9.16797 1.90625C9.46745 2.21875 9.69531 2.55729 9.85156 2.92188C10.0078 3.28646 10.0859 3.68359 10.0859 4.11328H13.2109C13.276 4.11328 13.3346 4.1263 13.3867 4.15234C13.4518 4.17839 13.5104 4.21745 13.5625 4.26953C13.6146 4.32161 13.6536 4.38021 13.6797 4.44531C13.7057 4.4974 13.7188 4.5625 13.7188 4.64062V17.1406C13.7188 17.2057 13.7057 17.2708 13.6797 17.3359C13.6536 17.388 13.6146 17.4401 13.5625 17.4922ZM12.6836 5.14844H10.0859V7.23828C10.0859 7.30339 10.0729 7.36849 10.0469 7.43359C10.0208 7.4987 9.98177 7.55729 9.92969 7.60938C9.8776 7.66146 9.81901 7.70052 9.75391 7.72656C9.6888 7.7526 9.6237 7.76562 9.55859 7.76562C9.49349 7.76562 9.42839 7.7526 9.36328 7.72656C9.29818 7.70052 9.23958 7.66146 9.1875 7.60938C9.13542 7.55729 9.09635 7.4987 9.07031 7.43359C9.04427 7.36849 9.03125 7.30339 9.03125 7.23828V5.14844H4.87109V7.23828C4.87109 7.30339 4.85807 7.36849 4.83203 7.43359C4.80599 7.4987 4.76693 7.55729 4.71484 7.60938C4.66276 7.66146 4.60417 7.70052 4.53906 7.72656C4.48698 7.7526 4.42188 7.76562 4.34375 7.76562C4.27865 7.76562 4.21354 7.7526 4.14844 7.72656C4.09635 7.70052 4.04427 7.66146 3.99219 7.60938C3.9401 7.55729 3.90104 7.4987 3.875 7.43359C3.84896 7.36849 3.83594 7.30339 3.83594 7.23828V5.14844H1.21875V16.6133H12.6836V5.14844ZM5.47656 2.62891C5.28125 2.83724 5.13151 3.0651 5.02734 3.3125C4.92318 3.5599 4.87109 3.82682 4.87109 4.11328H9.03125C9.03125 3.82682 8.97917 3.5599 8.875 3.3125C8.78385 3.0651 8.63411 2.83724 8.42578 2.62891C8.21745 2.43359 7.98958 2.28385 7.74219 2.17969C7.50781 2.07552 7.2474 2.02344 6.96094 2.02344C6.66146 2.02344 6.38802 2.07552 6.14062 2.17969C5.90625 2.28385 5.6849 2.43359 5.47656 2.62891Z"
+                                    fill="#141414" />
+                              </svg>
+                              <span class="card-btn__text">Add to cart</span>
+                           </button>
+                           <a href="" class="card-body__box_select select">
+                              <svg class="select__svg" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.9102 3.75781C16.793 3.45833 16.6432 3.17839 16.4609 2.91797C16.2917 2.65755 16.0898 2.41667 15.8555 2.19531C15.6211 1.96094 15.3737 1.75911 15.1133 1.58984C14.8529 1.40755 14.5794 1.25781 14.293 1.14062C13.9935 1.02344 13.694 0.938802 13.3945 0.886719C13.0951 0.821615 12.7891 0.789062 12.4766 0.789062C12.1771 0.789062 11.8776 0.821615 11.5781 0.886719C11.2786 0.938802 10.9792 1.02344 10.6797 1.14062C10.3802 1.25781 10.1003 1.40755 9.83984 1.58984C9.57943 1.75911 9.33203 1.96094 9.09766 2.19531C9.08464 2.20833 9.07161 2.22786 9.05859 2.25391C9.04557 2.26693 9.03255 2.27995 9.01953 2.29297C9.00651 2.30599 8.99349 2.31901 8.98047 2.33203C8.96745 2.34505 8.94792 2.35807 8.92188 2.37109C8.90885 2.35807 8.89583 2.34505 8.88281 2.33203C8.86979 2.31901 8.85677 2.30599 8.84375 2.29297C8.83073 2.27995 8.81771 2.26693 8.80469 2.25391C8.79167 2.22786 8.77865 2.20833 8.76562 2.19531C8.53125 1.96094 8.28385 1.75911 8.02344 1.58984C7.76302 1.40755 7.48307 1.25781 7.18359 1.14062C6.88411 1.02344 6.58464 0.938802 6.28516 0.886719C5.98568 0.821615 5.67969 0.789062 5.36719 0.789062C5.06771 0.789062 4.76823 0.821615 4.46875 0.886719C4.16927 0.938802 3.86979 1.02344 3.57031 1.14062C3.28385 1.25781 3.00391 1.40755 2.73047 1.58984C2.47005 1.75911 2.22266 1.96094 1.98828 2.19531C1.76693 2.41667 1.5651 2.65755 1.38281 2.91797C1.21354 3.17839 1.07031 3.45833 0.953125 3.75781C0.835938 4.04427 0.744792 4.34375 0.679688 4.65625C0.627604 4.95573 0.601562 5.26172 0.601562 5.57422C0.601562 5.89974 0.627604 6.21875 0.679688 6.53125C0.744792 6.83073 0.835938 7.1237 0.953125 7.41016C1.07031 7.69661 1.21354 7.97005 1.38281 8.23047C1.5651 8.49089 1.76693 8.73828 1.98828 8.97266L8.55078 15.5156C8.55078 15.5286 8.55078 15.5352 8.55078 15.5352C8.5638 15.5352 8.57031 15.5352 8.57031 15.5352L8.92188 15.8867L9.29297 15.5352C9.30599 15.5221 9.3125 15.5156 9.3125 15.5156L15.8555 8.97266C16.0898 8.73828 16.2917 8.49089 16.4609 8.23047C16.6432 7.97005 16.793 7.69661 16.9102 7.41016C17.0273 7.1237 17.112 6.83073 17.1641 6.53125C17.2292 6.21875 17.2617 5.89974 17.2617 5.57422C17.2617 5.26172 17.2292 4.95573 17.1641 4.65625C17.112 4.34375 17.0273 4.04427 16.9102 3.75781ZM15.9336 7.01953C15.8424 7.24089 15.7253 7.45573 15.582 7.66406C15.4518 7.85938 15.3021 8.04167 15.1328 8.21094L8.92188 14.4219L2.73047 8.21094C2.5612 8.04167 2.40495 7.85938 2.26172 7.66406C2.13151 7.45573 2.02083 7.24089 1.92969 7.01953C1.82552 6.78516 1.7474 6.55078 1.69531 6.31641C1.65625 6.06901 1.63672 5.82161 1.63672 5.57422C1.63672 5.32682 1.65625 5.08594 1.69531 4.85156C1.7474 4.60417 1.82552 4.36979 1.92969 4.14844C2.02083 3.91406 2.13151 3.69922 2.26172 3.50391C2.40495 3.29557 2.5612 3.10026 2.73047 2.91797C2.91276 2.7487 3.10807 2.59896 3.31641 2.46875C3.52474 2.32552 3.74609 2.20833 3.98047 2.11719C4.20182 2.02604 4.42969 1.96094 4.66406 1.92188C4.89844 1.86979 5.13932 1.84375 5.38672 1.84375C5.62109 1.84375 5.85547 1.86979 6.08984 1.92188C6.32422 1.96094 6.55859 2.02604 6.79297 2.11719C7.02734 2.20833 7.24219 2.32552 7.4375 2.46875C7.64583 2.59896 7.84115 2.7487 8.02344 2.91797C8.0625 2.97005 8.10156 3.02214 8.14062 3.07422C8.19271 3.11328 8.23828 3.15885 8.27734 3.21094C8.31641 3.25 8.34896 3.29557 8.375 3.34766C8.41406 3.39974 8.45312 3.45182 8.49219 3.50391C8.54427 3.58203 8.60286 3.64062 8.66797 3.67969C8.74609 3.70573 8.83073 3.71875 8.92188 3.71875C9.02604 3.71875 9.11068 3.70573 9.17578 3.67969C9.25391 3.64062 9.31901 3.58203 9.37109 3.50391C9.39714 3.45182 9.42969 3.39974 9.46875 3.34766C9.50781 3.29557 9.54688 3.25 9.58594 3.21094C9.625 3.15885 9.66406 3.11328 9.70312 3.07422C9.75521 3.02214 9.80078 2.97005 9.83984 2.91797C10.0221 2.7487 10.2109 2.59896 10.4062 2.46875C10.6146 2.32552 10.8359 2.20833 11.0703 2.11719C11.3047 2.02604 11.5391 1.96094 11.7734 1.92188C12.0078 1.86979 12.2422 1.84375 12.4766 1.84375C12.7109 1.84375 12.9453 1.86979 13.1797 1.92188C13.4141 1.96094 13.6484 2.02604 13.8828 2.11719C14.1172 2.20833 14.3385 2.32552 14.5469 2.46875C14.7552 2.59896 14.9505 2.7487 15.1328 2.91797C15.3021 3.10026 15.4518 3.29557 15.582 3.50391C15.7253 3.69922 15.8424 3.91406 15.9336 4.14844C16.0247 4.36979 16.0964 4.60417 16.1484 4.85156C16.2005 5.08594 16.2266 5.32682 16.2266 5.57422C16.2266 5.82161 16.2005 6.06901 16.1484 6.31641C16.0964 6.55078 16.0247 6.78516 15.9336 7.01953Z"
+                                    fill="#141414" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card__footer">
+                        <div class="card__footer_stars">
+                           <svg class="stars" viewBox="0 0 96 17">
+                              <path
+                                 d="M6.13281 6.46094L8.125 0.695312L10 6.53125L16.0703 6.64844L11.125 10.1641L12.8828 16.0234L7.96094 12.4141L2.99219 15.8594L4.91406 10.0938L0.0625 6.41406L6.13281 6.46094ZM26.0528 6.46094L28.045 0.695312L29.92 6.53125L35.9903 6.64844L31.045 10.1641L32.8028 16.0234L27.8809 12.4141L22.9122 15.8594L24.8341 10.0938L19.9825 6.41406L26.0528 6.46094ZM45.9728 6.46094L47.965 0.695312L49.84 6.53125L55.9103 6.64844L50.965 10.1641L52.7228 16.0234L47.8009 12.4141L42.8322 15.8594L44.7541 10.0938L39.9025 6.41406L45.9728 6.46094ZM75.5725 6.48438L70.6272 10L72.385 15.8594L67.4866 12.2734L62.5178 15.6953L64.3694 10.0703V9.90625L59.5647 6.25L65.635 6.29688L67.6272 0.53125L69.5022 6.34375L75.5725 6.48438ZM68.1897 11.2891L70.2053 12.7656L69.2444 9.53125L71.9397 7.58594L68.635 7.53906L67.5803 4.30469V4.375V10.8438L68.1897 11.2891ZM87.4769 0.53125L89.3519 6.34375L95.4222 6.48438L90.4769 10L92.2347 15.8594L87.3363 12.2734L82.3675 15.6953L84.2659 9.92969L79.4144 6.25L85.4847 6.29688L87.4769 0.53125ZM87.4534 4.30469L86.6331 6.67188L86.3284 7.49219L83.0238 7.46875L85.6722 9.48438L84.6409 12.6719L87.3597 10.7734L90.055 12.7656L89.0941 9.53125L91.7894 7.58594L88.4847 7.53906L87.4534 4.30469Z"
+                                 fill="#141414" />
+                           </svg>
+                        </div>
+                        <span class="card__footer_reviews">Reviews (2)</span>
+                     </div>
+                  </div>
+
+                  <div class="trending__slider_card card">
+                     <div class="card__img-box img-box">
+                        <a href=""><img src="./img/image3.jpg" alt="clothes" class="img-card"></a>
+                     </div>
+                     <div class="card__body card-body">
+                        <p class="card-body__product"><a href="">T -Shirts</a></p>
+                        <p class="card-body__brand"><a href="">Ecotton Pepsi T-shirt</a></p>
+                        <div class="card-body__price">$32</div>
+                        <!-- <div class="card-body__colors">
+                        <div class="card-body__colors_color color1"></div>
+                        <div class="card-body__colors_color color2"></div>
+                        <div class="card-body__colors_color color3"></div>
+                     </div> -->
+                        <!-- <div class="card-body__sizes">
+                        <div class="card-body__sizes_size size1">30</div>
+                        <div class="card-body__sizes_size size2">32</div>
+                        <div class="card-body__sizes_size size3">34</div>
+                        <div class="card-body__sizes_size size4">36</div>
+                        <div class="card-body__sizes_size size5">38</div>
+                        <div class="card-body__sizes_size size6">40</div>
+                        <div class="card-body__sizes_size size7">42</div>
+                     </div> -->
+                        <div class="card-body__models">
+                           <a href=""><img src="./img/img-model1.jpg" alt="clothes" class="card-body__models_img"></a>
+                           <a href=""><img src="./img/img-model2.jpg" alt="clothes" class="card-body__models_img"></a>
+                        </div>
+
+                        <div class="card-body__box">
+                           <button class="card-body__box_btn card-btn">
+                              <svg class="card-btn__svg" width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M13.5625 17.4922C13.5104 17.5443 13.4518 17.5833 13.3867 17.6094C13.3346 17.6354 13.276 17.6484 13.2109 17.6484H0.710938C0.632812 17.6484 0.561198 17.6354 0.496094 17.6094C0.44401 17.5833 0.391927 17.5443 0.339844 17.4922C0.28776 17.4401 0.248698 17.388 0.222656 17.3359C0.196615 17.2708 0.183594 17.2057 0.183594 17.1406V4.64062C0.183594 4.5625 0.196615 4.4974 0.222656 4.44531C0.248698 4.38021 0.28776 4.32161 0.339844 4.26953C0.391927 4.21745 0.44401 4.17839 0.496094 4.15234C0.561198 4.1263 0.632812 4.11328 0.710938 4.11328H3.83594C3.83594 3.68359 3.90755 3.28646 4.05078 2.92188C4.20703 2.54427 4.44141 2.20573 4.75391 1.90625C5.05339 1.59375 5.38542 1.36589 5.75 1.22266C6.1276 1.06641 6.53125 0.988281 6.96094 0.988281C7.39062 0.988281 7.78776 1.06641 8.15234 1.22266C8.51693 1.36589 8.85547 1.59375 9.16797 1.90625C9.46745 2.21875 9.69531 2.55729 9.85156 2.92188C10.0078 3.28646 10.0859 3.68359 10.0859 4.11328H13.2109C13.276 4.11328 13.3346 4.1263 13.3867 4.15234C13.4518 4.17839 13.5104 4.21745 13.5625 4.26953C13.6146 4.32161 13.6536 4.38021 13.6797 4.44531C13.7057 4.4974 13.7188 4.5625 13.7188 4.64062V17.1406C13.7188 17.2057 13.7057 17.2708 13.6797 17.3359C13.6536 17.388 13.6146 17.4401 13.5625 17.4922ZM12.6836 5.14844H10.0859V7.23828C10.0859 7.30339 10.0729 7.36849 10.0469 7.43359C10.0208 7.4987 9.98177 7.55729 9.92969 7.60938C9.8776 7.66146 9.81901 7.70052 9.75391 7.72656C9.6888 7.7526 9.6237 7.76562 9.55859 7.76562C9.49349 7.76562 9.42839 7.7526 9.36328 7.72656C9.29818 7.70052 9.23958 7.66146 9.1875 7.60938C9.13542 7.55729 9.09635 7.4987 9.07031 7.43359C9.04427 7.36849 9.03125 7.30339 9.03125 7.23828V5.14844H4.87109V7.23828C4.87109 7.30339 4.85807 7.36849 4.83203 7.43359C4.80599 7.4987 4.76693 7.55729 4.71484 7.60938C4.66276 7.66146 4.60417 7.70052 4.53906 7.72656C4.48698 7.7526 4.42188 7.76562 4.34375 7.76562C4.27865 7.76562 4.21354 7.7526 4.14844 7.72656C4.09635 7.70052 4.04427 7.66146 3.99219 7.60938C3.9401 7.55729 3.90104 7.4987 3.875 7.43359C3.84896 7.36849 3.83594 7.30339 3.83594 7.23828V5.14844H1.21875V16.6133H12.6836V5.14844ZM5.47656 2.62891C5.28125 2.83724 5.13151 3.0651 5.02734 3.3125C4.92318 3.5599 4.87109 3.82682 4.87109 4.11328H9.03125C9.03125 3.82682 8.97917 3.5599 8.875 3.3125C8.78385 3.0651 8.63411 2.83724 8.42578 2.62891C8.21745 2.43359 7.98958 2.28385 7.74219 2.17969C7.50781 2.07552 7.2474 2.02344 6.96094 2.02344C6.66146 2.02344 6.38802 2.07552 6.14062 2.17969C5.90625 2.28385 5.6849 2.43359 5.47656 2.62891Z"
+                                    fill="#141414" />
+                              </svg>
+                              <span class="card-btn__text">Add to cart</span>
+                           </button>
+                           <a href="" class="card-body__box_select select">
+                              <svg class="select__svg" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.9102 3.75781C16.793 3.45833 16.6432 3.17839 16.4609 2.91797C16.2917 2.65755 16.0898 2.41667 15.8555 2.19531C15.6211 1.96094 15.3737 1.75911 15.1133 1.58984C14.8529 1.40755 14.5794 1.25781 14.293 1.14062C13.9935 1.02344 13.694 0.938802 13.3945 0.886719C13.0951 0.821615 12.7891 0.789062 12.4766 0.789062C12.1771 0.789062 11.8776 0.821615 11.5781 0.886719C11.2786 0.938802 10.9792 1.02344 10.6797 1.14062C10.3802 1.25781 10.1003 1.40755 9.83984 1.58984C9.57943 1.75911 9.33203 1.96094 9.09766 2.19531C9.08464 2.20833 9.07161 2.22786 9.05859 2.25391C9.04557 2.26693 9.03255 2.27995 9.01953 2.29297C9.00651 2.30599 8.99349 2.31901 8.98047 2.33203C8.96745 2.34505 8.94792 2.35807 8.92188 2.37109C8.90885 2.35807 8.89583 2.34505 8.88281 2.33203C8.86979 2.31901 8.85677 2.30599 8.84375 2.29297C8.83073 2.27995 8.81771 2.26693 8.80469 2.25391C8.79167 2.22786 8.77865 2.20833 8.76562 2.19531C8.53125 1.96094 8.28385 1.75911 8.02344 1.58984C7.76302 1.40755 7.48307 1.25781 7.18359 1.14062C6.88411 1.02344 6.58464 0.938802 6.28516 0.886719C5.98568 0.821615 5.67969 0.789062 5.36719 0.789062C5.06771 0.789062 4.76823 0.821615 4.46875 0.886719C4.16927 0.938802 3.86979 1.02344 3.57031 1.14062C3.28385 1.25781 3.00391 1.40755 2.73047 1.58984C2.47005 1.75911 2.22266 1.96094 1.98828 2.19531C1.76693 2.41667 1.5651 2.65755 1.38281 2.91797C1.21354 3.17839 1.07031 3.45833 0.953125 3.75781C0.835938 4.04427 0.744792 4.34375 0.679688 4.65625C0.627604 4.95573 0.601562 5.26172 0.601562 5.57422C0.601562 5.89974 0.627604 6.21875 0.679688 6.53125C0.744792 6.83073 0.835938 7.1237 0.953125 7.41016C1.07031 7.69661 1.21354 7.97005 1.38281 8.23047C1.5651 8.49089 1.76693 8.73828 1.98828 8.97266L8.55078 15.5156C8.55078 15.5286 8.55078 15.5352 8.55078 15.5352C8.5638 15.5352 8.57031 15.5352 8.57031 15.5352L8.92188 15.8867L9.29297 15.5352C9.30599 15.5221 9.3125 15.5156 9.3125 15.5156L15.8555 8.97266C16.0898 8.73828 16.2917 8.49089 16.4609 8.23047C16.6432 7.97005 16.793 7.69661 16.9102 7.41016C17.0273 7.1237 17.112 6.83073 17.1641 6.53125C17.2292 6.21875 17.2617 5.89974 17.2617 5.57422C17.2617 5.26172 17.2292 4.95573 17.1641 4.65625C17.112 4.34375 17.0273 4.04427 16.9102 3.75781ZM15.9336 7.01953C15.8424 7.24089 15.7253 7.45573 15.582 7.66406C15.4518 7.85938 15.3021 8.04167 15.1328 8.21094L8.92188 14.4219L2.73047 8.21094C2.5612 8.04167 2.40495 7.85938 2.26172 7.66406C2.13151 7.45573 2.02083 7.24089 1.92969 7.01953C1.82552 6.78516 1.7474 6.55078 1.69531 6.31641C1.65625 6.06901 1.63672 5.82161 1.63672 5.57422C1.63672 5.32682 1.65625 5.08594 1.69531 4.85156C1.7474 4.60417 1.82552 4.36979 1.92969 4.14844C2.02083 3.91406 2.13151 3.69922 2.26172 3.50391C2.40495 3.29557 2.5612 3.10026 2.73047 2.91797C2.91276 2.7487 3.10807 2.59896 3.31641 2.46875C3.52474 2.32552 3.74609 2.20833 3.98047 2.11719C4.20182 2.02604 4.42969 1.96094 4.66406 1.92188C4.89844 1.86979 5.13932 1.84375 5.38672 1.84375C5.62109 1.84375 5.85547 1.86979 6.08984 1.92188C6.32422 1.96094 6.55859 2.02604 6.79297 2.11719C7.02734 2.20833 7.24219 2.32552 7.4375 2.46875C7.64583 2.59896 7.84115 2.7487 8.02344 2.91797C8.0625 2.97005 8.10156 3.02214 8.14062 3.07422C8.19271 3.11328 8.23828 3.15885 8.27734 3.21094C8.31641 3.25 8.34896 3.29557 8.375 3.34766C8.41406 3.39974 8.45312 3.45182 8.49219 3.50391C8.54427 3.58203 8.60286 3.64062 8.66797 3.67969C8.74609 3.70573 8.83073 3.71875 8.92188 3.71875C9.02604 3.71875 9.11068 3.70573 9.17578 3.67969C9.25391 3.64062 9.31901 3.58203 9.37109 3.50391C9.39714 3.45182 9.42969 3.39974 9.46875 3.34766C9.50781 3.29557 9.54688 3.25 9.58594 3.21094C9.625 3.15885 9.66406 3.11328 9.70312 3.07422C9.75521 3.02214 9.80078 2.97005 9.83984 2.91797C10.0221 2.7487 10.2109 2.59896 10.4062 2.46875C10.6146 2.32552 10.8359 2.20833 11.0703 2.11719C11.3047 2.02604 11.5391 1.96094 11.7734 1.92188C12.0078 1.86979 12.2422 1.84375 12.4766 1.84375C12.7109 1.84375 12.9453 1.86979 13.1797 1.92188C13.4141 1.96094 13.6484 2.02604 13.8828 2.11719C14.1172 2.20833 14.3385 2.32552 14.5469 2.46875C14.7552 2.59896 14.9505 2.7487 15.1328 2.91797C15.3021 3.10026 15.4518 3.29557 15.582 3.50391C15.7253 3.69922 15.8424 3.91406 15.9336 4.14844C16.0247 4.36979 16.0964 4.60417 16.1484 4.85156C16.2005 5.08594 16.2266 5.32682 16.2266 5.57422C16.2266 5.82161 16.2005 6.06901 16.1484 6.31641C16.0964 6.55078 16.0247 6.78516 15.9336 7.01953Z"
+                                    fill="#141414" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+
+
+                     <!-- <div class="card__footer">
+                        <div class="card__footer_stars">
+                           <svg class="stars" viewBox="0 0 96 17">
+                              <path
+                                 d="M6.13281 6.46094L8.125 0.695312L10 6.53125L16.0703 6.64844L11.125 10.1641L12.8828 16.0234L7.96094 12.4141L2.99219 15.8594L4.91406 10.0938L0.0625 6.41406L6.13281 6.46094ZM26.0528 6.46094L28.045 0.695312L29.92 6.53125L35.9903 6.64844L31.045 10.1641L32.8028 16.0234L27.8809 12.4141L22.9122 15.8594L24.8341 10.0938L19.9825 6.41406L26.0528 6.46094ZM45.9728 6.46094L47.965 0.695312L49.84 6.53125L55.9103 6.64844L50.965 10.1641L52.7228 16.0234L47.8009 12.4141L42.8322 15.8594L44.7541 10.0938L39.9025 6.41406L45.9728 6.46094ZM75.5725 6.48438L70.6272 10L72.385 15.8594L67.4866 12.2734L62.5178 15.6953L64.3694 10.0703V9.90625L59.5647 6.25L65.635 6.29688L67.6272 0.53125L69.5022 6.34375L75.5725 6.48438ZM68.1897 11.2891L70.2053 12.7656L69.2444 9.53125L71.9397 7.58594L68.635 7.53906L67.5803 4.30469V4.375V10.8438L68.1897 11.2891ZM87.4769 0.53125L89.3519 6.34375L95.4222 6.48438L90.4769 10L92.2347 15.8594L87.3363 12.2734L82.3675 15.6953L84.2659 9.92969L79.4144 6.25L85.4847 6.29688L87.4769 0.53125ZM87.4534 4.30469L86.6331 6.67188L86.3284 7.49219L83.0238 7.46875L85.6722 9.48438L84.6409 12.6719L87.3597 10.7734L90.055 12.7656L89.0941 9.53125L91.7894 7.58594L88.4847 7.53906L87.4534 4.30469Z"
+                                 fill="#141414" />
+                           </svg>
+                        </div>
+                        <span class="card__footer_reviews">Reviews (2)</span>
+                     </div> -->
+                  </div>
+
+                  <div class="trending__slider_card card">
+                     <div class="card__img-box img-box">
+                        <a href=""><img src="./img/image4.jpg" alt="clothes" class="img-card"></a>
+                     </div>
+                     <div class="card__body card-body">
+                        <p class="card-body__product"><a href="">T -Shirts</a></p>
+                        <p class="card-body__brand"><a href="">Ecotton Pepsi T-shirt</a></p>
+                        <div class="card-body__price">$32</div>
+                        <div class="card-body__colors">
+                           <div class="card-body__colors_color color1 color1-black"></div>
+                           <div class="card-body__colors_color color2 color2-white"></div>
+                           <div class="card-body__colors_color color3 color3-red"></div>
+                        </div>
+                        <!-- <div class="card-body__sizes">
+                        <div class="card-body__sizes_size size1">30</div>
+                        <div class="card-body__sizes_size size2">32</div>
+                        <div class="card-body__sizes_size size3">34</div>
+                        <div class="card-body__sizes_size size4">36</div>
+                        <div class="card-body__sizes_size size5">38</div>
+                        <div class="card-body__sizes_size size6">40</div>
+                        <div class="card-body__sizes_size size7">42</div>
+                     </div> -->
+                        <div class="card-body__box">
+                           <button class="card-body__box_btn card-btn">
+                              <svg class="card-btn__svg" width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M13.5625 17.4922C13.5104 17.5443 13.4518 17.5833 13.3867 17.6094C13.3346 17.6354 13.276 17.6484 13.2109 17.6484H0.710938C0.632812 17.6484 0.561198 17.6354 0.496094 17.6094C0.44401 17.5833 0.391927 17.5443 0.339844 17.4922C0.28776 17.4401 0.248698 17.388 0.222656 17.3359C0.196615 17.2708 0.183594 17.2057 0.183594 17.1406V4.64062C0.183594 4.5625 0.196615 4.4974 0.222656 4.44531C0.248698 4.38021 0.28776 4.32161 0.339844 4.26953C0.391927 4.21745 0.44401 4.17839 0.496094 4.15234C0.561198 4.1263 0.632812 4.11328 0.710938 4.11328H3.83594C3.83594 3.68359 3.90755 3.28646 4.05078 2.92188C4.20703 2.54427 4.44141 2.20573 4.75391 1.90625C5.05339 1.59375 5.38542 1.36589 5.75 1.22266C6.1276 1.06641 6.53125 0.988281 6.96094 0.988281C7.39062 0.988281 7.78776 1.06641 8.15234 1.22266C8.51693 1.36589 8.85547 1.59375 9.16797 1.90625C9.46745 2.21875 9.69531 2.55729 9.85156 2.92188C10.0078 3.28646 10.0859 3.68359 10.0859 4.11328H13.2109C13.276 4.11328 13.3346 4.1263 13.3867 4.15234C13.4518 4.17839 13.5104 4.21745 13.5625 4.26953C13.6146 4.32161 13.6536 4.38021 13.6797 4.44531C13.7057 4.4974 13.7188 4.5625 13.7188 4.64062V17.1406C13.7188 17.2057 13.7057 17.2708 13.6797 17.3359C13.6536 17.388 13.6146 17.4401 13.5625 17.4922ZM12.6836 5.14844H10.0859V7.23828C10.0859 7.30339 10.0729 7.36849 10.0469 7.43359C10.0208 7.4987 9.98177 7.55729 9.92969 7.60938C9.8776 7.66146 9.81901 7.70052 9.75391 7.72656C9.6888 7.7526 9.6237 7.76562 9.55859 7.76562C9.49349 7.76562 9.42839 7.7526 9.36328 7.72656C9.29818 7.70052 9.23958 7.66146 9.1875 7.60938C9.13542 7.55729 9.09635 7.4987 9.07031 7.43359C9.04427 7.36849 9.03125 7.30339 9.03125 7.23828V5.14844H4.87109V7.23828C4.87109 7.30339 4.85807 7.36849 4.83203 7.43359C4.80599 7.4987 4.76693 7.55729 4.71484 7.60938C4.66276 7.66146 4.60417 7.70052 4.53906 7.72656C4.48698 7.7526 4.42188 7.76562 4.34375 7.76562C4.27865 7.76562 4.21354 7.7526 4.14844 7.72656C4.09635 7.70052 4.04427 7.66146 3.99219 7.60938C3.9401 7.55729 3.90104 7.4987 3.875 7.43359C3.84896 7.36849 3.83594 7.30339 3.83594 7.23828V5.14844H1.21875V16.6133H12.6836V5.14844ZM5.47656 2.62891C5.28125 2.83724 5.13151 3.0651 5.02734 3.3125C4.92318 3.5599 4.87109 3.82682 4.87109 4.11328H9.03125C9.03125 3.82682 8.97917 3.5599 8.875 3.3125C8.78385 3.0651 8.63411 2.83724 8.42578 2.62891C8.21745 2.43359 7.98958 2.28385 7.74219 2.17969C7.50781 2.07552 7.2474 2.02344 6.96094 2.02344C6.66146 2.02344 6.38802 2.07552 6.14062 2.17969C5.90625 2.28385 5.6849 2.43359 5.47656 2.62891Z"
+                                    fill="#141414" />
+                              </svg>
+                              <span class="card-btn__text">Add to cart</span>
+                           </button>
+                           <a href="" class="card-body__box_select select">
+                              <svg class="select__svg" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.9102 3.75781C16.793 3.45833 16.6432 3.17839 16.4609 2.91797C16.2917 2.65755 16.0898 2.41667 15.8555 2.19531C15.6211 1.96094 15.3737 1.75911 15.1133 1.58984C14.8529 1.40755 14.5794 1.25781 14.293 1.14062C13.9935 1.02344 13.694 0.938802 13.3945 0.886719C13.0951 0.821615 12.7891 0.789062 12.4766 0.789062C12.1771 0.789062 11.8776 0.821615 11.5781 0.886719C11.2786 0.938802 10.9792 1.02344 10.6797 1.14062C10.3802 1.25781 10.1003 1.40755 9.83984 1.58984C9.57943 1.75911 9.33203 1.96094 9.09766 2.19531C9.08464 2.20833 9.07161 2.22786 9.05859 2.25391C9.04557 2.26693 9.03255 2.27995 9.01953 2.29297C9.00651 2.30599 8.99349 2.31901 8.98047 2.33203C8.96745 2.34505 8.94792 2.35807 8.92188 2.37109C8.90885 2.35807 8.89583 2.34505 8.88281 2.33203C8.86979 2.31901 8.85677 2.30599 8.84375 2.29297C8.83073 2.27995 8.81771 2.26693 8.80469 2.25391C8.79167 2.22786 8.77865 2.20833 8.76562 2.19531C8.53125 1.96094 8.28385 1.75911 8.02344 1.58984C7.76302 1.40755 7.48307 1.25781 7.18359 1.14062C6.88411 1.02344 6.58464 0.938802 6.28516 0.886719C5.98568 0.821615 5.67969 0.789062 5.36719 0.789062C5.06771 0.789062 4.76823 0.821615 4.46875 0.886719C4.16927 0.938802 3.86979 1.02344 3.57031 1.14062C3.28385 1.25781 3.00391 1.40755 2.73047 1.58984C2.47005 1.75911 2.22266 1.96094 1.98828 2.19531C1.76693 2.41667 1.5651 2.65755 1.38281 2.91797C1.21354 3.17839 1.07031 3.45833 0.953125 3.75781C0.835938 4.04427 0.744792 4.34375 0.679688 4.65625C0.627604 4.95573 0.601562 5.26172 0.601562 5.57422C0.601562 5.89974 0.627604 6.21875 0.679688 6.53125C0.744792 6.83073 0.835938 7.1237 0.953125 7.41016C1.07031 7.69661 1.21354 7.97005 1.38281 8.23047C1.5651 8.49089 1.76693 8.73828 1.98828 8.97266L8.55078 15.5156C8.55078 15.5286 8.55078 15.5352 8.55078 15.5352C8.5638 15.5352 8.57031 15.5352 8.57031 15.5352L8.92188 15.8867L9.29297 15.5352C9.30599 15.5221 9.3125 15.5156 9.3125 15.5156L15.8555 8.97266C16.0898 8.73828 16.2917 8.49089 16.4609 8.23047C16.6432 7.97005 16.793 7.69661 16.9102 7.41016C17.0273 7.1237 17.112 6.83073 17.1641 6.53125C17.2292 6.21875 17.2617 5.89974 17.2617 5.57422C17.2617 5.26172 17.2292 4.95573 17.1641 4.65625C17.112 4.34375 17.0273 4.04427 16.9102 3.75781ZM15.9336 7.01953C15.8424 7.24089 15.7253 7.45573 15.582 7.66406C15.4518 7.85938 15.3021 8.04167 15.1328 8.21094L8.92188 14.4219L2.73047 8.21094C2.5612 8.04167 2.40495 7.85938 2.26172 7.66406C2.13151 7.45573 2.02083 7.24089 1.92969 7.01953C1.82552 6.78516 1.7474 6.55078 1.69531 6.31641C1.65625 6.06901 1.63672 5.82161 1.63672 5.57422C1.63672 5.32682 1.65625 5.08594 1.69531 4.85156C1.7474 4.60417 1.82552 4.36979 1.92969 4.14844C2.02083 3.91406 2.13151 3.69922 2.26172 3.50391C2.40495 3.29557 2.5612 3.10026 2.73047 2.91797C2.91276 2.7487 3.10807 2.59896 3.31641 2.46875C3.52474 2.32552 3.74609 2.20833 3.98047 2.11719C4.20182 2.02604 4.42969 1.96094 4.66406 1.92188C4.89844 1.86979 5.13932 1.84375 5.38672 1.84375C5.62109 1.84375 5.85547 1.86979 6.08984 1.92188C6.32422 1.96094 6.55859 2.02604 6.79297 2.11719C7.02734 2.20833 7.24219 2.32552 7.4375 2.46875C7.64583 2.59896 7.84115 2.7487 8.02344 2.91797C8.0625 2.97005 8.10156 3.02214 8.14062 3.07422C8.19271 3.11328 8.23828 3.15885 8.27734 3.21094C8.31641 3.25 8.34896 3.29557 8.375 3.34766C8.41406 3.39974 8.45312 3.45182 8.49219 3.50391C8.54427 3.58203 8.60286 3.64062 8.66797 3.67969C8.74609 3.70573 8.83073 3.71875 8.92188 3.71875C9.02604 3.71875 9.11068 3.70573 9.17578 3.67969C9.25391 3.64062 9.31901 3.58203 9.37109 3.50391C9.39714 3.45182 9.42969 3.39974 9.46875 3.34766C9.50781 3.29557 9.54688 3.25 9.58594 3.21094C9.625 3.15885 9.66406 3.11328 9.70312 3.07422C9.75521 3.02214 9.80078 2.97005 9.83984 2.91797C10.0221 2.7487 10.2109 2.59896 10.4062 2.46875C10.6146 2.32552 10.8359 2.20833 11.0703 2.11719C11.3047 2.02604 11.5391 1.96094 11.7734 1.92188C12.0078 1.86979 12.2422 1.84375 12.4766 1.84375C12.7109 1.84375 12.9453 1.86979 13.1797 1.92188C13.4141 1.96094 13.6484 2.02604 13.8828 2.11719C14.1172 2.20833 14.3385 2.32552 14.5469 2.46875C14.7552 2.59896 14.9505 2.7487 15.1328 2.91797C15.3021 3.10026 15.4518 3.29557 15.582 3.50391C15.7253 3.69922 15.8424 3.91406 15.9336 4.14844C16.0247 4.36979 16.0964 4.60417 16.1484 4.85156C16.2005 5.08594 16.2266 5.32682 16.2266 5.57422C16.2266 5.82161 16.2005 6.06901 16.1484 6.31641C16.0964 6.55078 16.0247 6.78516 15.9336 7.01953Z"
+                                    fill="#141414" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card__footer">
+                        <div class="card__footer_stars">
+                           <svg class="stars" viewBox="0 0 96 17">
+                              <path
+                                 d="M6.13281 6.46094L8.125 0.695312L10 6.53125L16.0703 6.64844L11.125 10.1641L12.8828 16.0234L7.96094 12.4141L2.99219 15.8594L4.91406 10.0938L0.0625 6.41406L6.13281 6.46094ZM26.0528 6.46094L28.045 0.695312L29.92 6.53125L35.9903 6.64844L31.045 10.1641L32.8028 16.0234L27.8809 12.4141L22.9122 15.8594L24.8341 10.0938L19.9825 6.41406L26.0528 6.46094ZM45.9728 6.46094L47.965 0.695312L49.84 6.53125L55.9103 6.64844L50.965 10.1641L52.7228 16.0234L47.8009 12.4141L42.8322 15.8594L44.7541 10.0938L39.9025 6.41406L45.9728 6.46094ZM75.5725 6.48438L70.6272 10L72.385 15.8594L67.4866 12.2734L62.5178 15.6953L64.3694 10.0703V9.90625L59.5647 6.25L65.635 6.29688L67.6272 0.53125L69.5022 6.34375L75.5725 6.48438ZM68.1897 11.2891L70.2053 12.7656L69.2444 9.53125L71.9397 7.58594L68.635 7.53906L67.5803 4.30469V4.375V10.8438L68.1897 11.2891ZM87.4769 0.53125L89.3519 6.34375L95.4222 6.48438L90.4769 10L92.2347 15.8594L87.3363 12.2734L82.3675 15.6953L84.2659 9.92969L79.4144 6.25L85.4847 6.29688L87.4769 0.53125ZM87.4534 4.30469L86.6331 6.67188L86.3284 7.49219L83.0238 7.46875L85.6722 9.48438L84.6409 12.6719L87.3597 10.7734L90.055 12.7656L89.0941 9.53125L91.7894 7.58594L88.4847 7.53906L87.4534 4.30469Z"
+                                 fill="#141414" />
+                           </svg>
+                        </div>
+                        <span class="card__footer_reviews">Reviews (2)</span>
+                     </div>
+                  </div>
+
+                  <div class="trending__slider_card card">
+                     <div class="card__img-box img-box">
+                        <a href=""><img src="./img/image2.jpg" alt="clothes" class="img-card"></a>
+                     </div>
+                     <div class="card__body card-body">
+                        <p class="card-body__product"><a href="">T -Shirts</a></p>
+                        <p class="card-body__brand"><a href="">Ecotton Pepsi T-shirt</a></p>
+                        <div class="card-body__price">$32</div>
+                        <div class="card-body__colors">
+                           <div class="card-body__colors_color color1"></div>
+                           <div class="card-body__colors_color color2"></div>
+                           <div class="card-body__colors_color color3"></div>
+                        </div>
+                        <div class="card-body__sizes">
+                           <div class="card-body__sizes_size size1">30</div>
+                           <div class="card-body__sizes_size size2">32</div>
+                           <div class="card-body__sizes_size size3">34</div>
+                           <div class="card-body__sizes_size size4">36</div>
+                           <div class="card-body__sizes_size size5">38</div>
+                           <div class="card-body__sizes_size size6">40</div>
+                           <div class="card-body__sizes_size size7">42</div>
+                        </div>
+                        <div class="card-body__box">
+                           <button class="card-body__box_btn card-btn">
+                              <svg class="card-btn__svg" width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M13.5625 17.4922C13.5104 17.5443 13.4518 17.5833 13.3867 17.6094C13.3346 17.6354 13.276 17.6484 13.2109 17.6484H0.710938C0.632812 17.6484 0.561198 17.6354 0.496094 17.6094C0.44401 17.5833 0.391927 17.5443 0.339844 17.4922C0.28776 17.4401 0.248698 17.388 0.222656 17.3359C0.196615 17.2708 0.183594 17.2057 0.183594 17.1406V4.64062C0.183594 4.5625 0.196615 4.4974 0.222656 4.44531C0.248698 4.38021 0.28776 4.32161 0.339844 4.26953C0.391927 4.21745 0.44401 4.17839 0.496094 4.15234C0.561198 4.1263 0.632812 4.11328 0.710938 4.11328H3.83594C3.83594 3.68359 3.90755 3.28646 4.05078 2.92188C4.20703 2.54427 4.44141 2.20573 4.75391 1.90625C5.05339 1.59375 5.38542 1.36589 5.75 1.22266C6.1276 1.06641 6.53125 0.988281 6.96094 0.988281C7.39062 0.988281 7.78776 1.06641 8.15234 1.22266C8.51693 1.36589 8.85547 1.59375 9.16797 1.90625C9.46745 2.21875 9.69531 2.55729 9.85156 2.92188C10.0078 3.28646 10.0859 3.68359 10.0859 4.11328H13.2109C13.276 4.11328 13.3346 4.1263 13.3867 4.15234C13.4518 4.17839 13.5104 4.21745 13.5625 4.26953C13.6146 4.32161 13.6536 4.38021 13.6797 4.44531C13.7057 4.4974 13.7188 4.5625 13.7188 4.64062V17.1406C13.7188 17.2057 13.7057 17.2708 13.6797 17.3359C13.6536 17.388 13.6146 17.4401 13.5625 17.4922ZM12.6836 5.14844H10.0859V7.23828C10.0859 7.30339 10.0729 7.36849 10.0469 7.43359C10.0208 7.4987 9.98177 7.55729 9.92969 7.60938C9.8776 7.66146 9.81901 7.70052 9.75391 7.72656C9.6888 7.7526 9.6237 7.76562 9.55859 7.76562C9.49349 7.76562 9.42839 7.7526 9.36328 7.72656C9.29818 7.70052 9.23958 7.66146 9.1875 7.60938C9.13542 7.55729 9.09635 7.4987 9.07031 7.43359C9.04427 7.36849 9.03125 7.30339 9.03125 7.23828V5.14844H4.87109V7.23828C4.87109 7.30339 4.85807 7.36849 4.83203 7.43359C4.80599 7.4987 4.76693 7.55729 4.71484 7.60938C4.66276 7.66146 4.60417 7.70052 4.53906 7.72656C4.48698 7.7526 4.42188 7.76562 4.34375 7.76562C4.27865 7.76562 4.21354 7.7526 4.14844 7.72656C4.09635 7.70052 4.04427 7.66146 3.99219 7.60938C3.9401 7.55729 3.90104 7.4987 3.875 7.43359C3.84896 7.36849 3.83594 7.30339 3.83594 7.23828V5.14844H1.21875V16.6133H12.6836V5.14844ZM5.47656 2.62891C5.28125 2.83724 5.13151 3.0651 5.02734 3.3125C4.92318 3.5599 4.87109 3.82682 4.87109 4.11328H9.03125C9.03125 3.82682 8.97917 3.5599 8.875 3.3125C8.78385 3.0651 8.63411 2.83724 8.42578 2.62891C8.21745 2.43359 7.98958 2.28385 7.74219 2.17969C7.50781 2.07552 7.2474 2.02344 6.96094 2.02344C6.66146 2.02344 6.38802 2.07552 6.14062 2.17969C5.90625 2.28385 5.6849 2.43359 5.47656 2.62891Z"
+                                    fill="#141414" />
+                              </svg>
+                              <span class="card-btn__text">Add to cart</span>
+                           </button>
+                           <a href="" class="card-body__box_select select">
+                              <svg class="select__svg" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.9102 3.75781C16.793 3.45833 16.6432 3.17839 16.4609 2.91797C16.2917 2.65755 16.0898 2.41667 15.8555 2.19531C15.6211 1.96094 15.3737 1.75911 15.1133 1.58984C14.8529 1.40755 14.5794 1.25781 14.293 1.14062C13.9935 1.02344 13.694 0.938802 13.3945 0.886719C13.0951 0.821615 12.7891 0.789062 12.4766 0.789062C12.1771 0.789062 11.8776 0.821615 11.5781 0.886719C11.2786 0.938802 10.9792 1.02344 10.6797 1.14062C10.3802 1.25781 10.1003 1.40755 9.83984 1.58984C9.57943 1.75911 9.33203 1.96094 9.09766 2.19531C9.08464 2.20833 9.07161 2.22786 9.05859 2.25391C9.04557 2.26693 9.03255 2.27995 9.01953 2.29297C9.00651 2.30599 8.99349 2.31901 8.98047 2.33203C8.96745 2.34505 8.94792 2.35807 8.92188 2.37109C8.90885 2.35807 8.89583 2.34505 8.88281 2.33203C8.86979 2.31901 8.85677 2.30599 8.84375 2.29297C8.83073 2.27995 8.81771 2.26693 8.80469 2.25391C8.79167 2.22786 8.77865 2.20833 8.76562 2.19531C8.53125 1.96094 8.28385 1.75911 8.02344 1.58984C7.76302 1.40755 7.48307 1.25781 7.18359 1.14062C6.88411 1.02344 6.58464 0.938802 6.28516 0.886719C5.98568 0.821615 5.67969 0.789062 5.36719 0.789062C5.06771 0.789062 4.76823 0.821615 4.46875 0.886719C4.16927 0.938802 3.86979 1.02344 3.57031 1.14062C3.28385 1.25781 3.00391 1.40755 2.73047 1.58984C2.47005 1.75911 2.22266 1.96094 1.98828 2.19531C1.76693 2.41667 1.5651 2.65755 1.38281 2.91797C1.21354 3.17839 1.07031 3.45833 0.953125 3.75781C0.835938 4.04427 0.744792 4.34375 0.679688 4.65625C0.627604 4.95573 0.601562 5.26172 0.601562 5.57422C0.601562 5.89974 0.627604 6.21875 0.679688 6.53125C0.744792 6.83073 0.835938 7.1237 0.953125 7.41016C1.07031 7.69661 1.21354 7.97005 1.38281 8.23047C1.5651 8.49089 1.76693 8.73828 1.98828 8.97266L8.55078 15.5156C8.55078 15.5286 8.55078 15.5352 8.55078 15.5352C8.5638 15.5352 8.57031 15.5352 8.57031 15.5352L8.92188 15.8867L9.29297 15.5352C9.30599 15.5221 9.3125 15.5156 9.3125 15.5156L15.8555 8.97266C16.0898 8.73828 16.2917 8.49089 16.4609 8.23047C16.6432 7.97005 16.793 7.69661 16.9102 7.41016C17.0273 7.1237 17.112 6.83073 17.1641 6.53125C17.2292 6.21875 17.2617 5.89974 17.2617 5.57422C17.2617 5.26172 17.2292 4.95573 17.1641 4.65625C17.112 4.34375 17.0273 4.04427 16.9102 3.75781ZM15.9336 7.01953C15.8424 7.24089 15.7253 7.45573 15.582 7.66406C15.4518 7.85938 15.3021 8.04167 15.1328 8.21094L8.92188 14.4219L2.73047 8.21094C2.5612 8.04167 2.40495 7.85938 2.26172 7.66406C2.13151 7.45573 2.02083 7.24089 1.92969 7.01953C1.82552 6.78516 1.7474 6.55078 1.69531 6.31641C1.65625 6.06901 1.63672 5.82161 1.63672 5.57422C1.63672 5.32682 1.65625 5.08594 1.69531 4.85156C1.7474 4.60417 1.82552 4.36979 1.92969 4.14844C2.02083 3.91406 2.13151 3.69922 2.26172 3.50391C2.40495 3.29557 2.5612 3.10026 2.73047 2.91797C2.91276 2.7487 3.10807 2.59896 3.31641 2.46875C3.52474 2.32552 3.74609 2.20833 3.98047 2.11719C4.20182 2.02604 4.42969 1.96094 4.66406 1.92188C4.89844 1.86979 5.13932 1.84375 5.38672 1.84375C5.62109 1.84375 5.85547 1.86979 6.08984 1.92188C6.32422 1.96094 6.55859 2.02604 6.79297 2.11719C7.02734 2.20833 7.24219 2.32552 7.4375 2.46875C7.64583 2.59896 7.84115 2.7487 8.02344 2.91797C8.0625 2.97005 8.10156 3.02214 8.14062 3.07422C8.19271 3.11328 8.23828 3.15885 8.27734 3.21094C8.31641 3.25 8.34896 3.29557 8.375 3.34766C8.41406 3.39974 8.45312 3.45182 8.49219 3.50391C8.54427 3.58203 8.60286 3.64062 8.66797 3.67969C8.74609 3.70573 8.83073 3.71875 8.92188 3.71875C9.02604 3.71875 9.11068 3.70573 9.17578 3.67969C9.25391 3.64062 9.31901 3.58203 9.37109 3.50391C9.39714 3.45182 9.42969 3.39974 9.46875 3.34766C9.50781 3.29557 9.54688 3.25 9.58594 3.21094C9.625 3.15885 9.66406 3.11328 9.70312 3.07422C9.75521 3.02214 9.80078 2.97005 9.83984 2.91797C10.0221 2.7487 10.2109 2.59896 10.4062 2.46875C10.6146 2.32552 10.8359 2.20833 11.0703 2.11719C11.3047 2.02604 11.5391 1.96094 11.7734 1.92188C12.0078 1.86979 12.2422 1.84375 12.4766 1.84375C12.7109 1.84375 12.9453 1.86979 13.1797 1.92188C13.4141 1.96094 13.6484 2.02604 13.8828 2.11719C14.1172 2.20833 14.3385 2.32552 14.5469 2.46875C14.7552 2.59896 14.9505 2.7487 15.1328 2.91797C15.3021 3.10026 15.4518 3.29557 15.582 3.50391C15.7253 3.69922 15.8424 3.91406 15.9336 4.14844C16.0247 4.36979 16.0964 4.60417 16.1484 4.85156C16.2005 5.08594 16.2266 5.32682 16.2266 5.57422C16.2266 5.82161 16.2005 6.06901 16.1484 6.31641C16.0964 6.55078 16.0247 6.78516 15.9336 7.01953Z"
+                                    fill="#141414" />
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="card__footer">
+                        <div class="card__footer_stars">
+                           <svg class="stars" viewBox="0 0 96 17">
+                              <path
+                                 d="M6.13281 6.46094L8.125 0.695312L10 6.53125L16.0703 6.64844L11.125 10.1641L12.8828 16.0234L7.96094 12.4141L2.99219 15.8594L4.91406 10.0938L0.0625 6.41406L6.13281 6.46094ZM26.0528 6.46094L28.045 0.695312L29.92 6.53125L35.9903 6.64844L31.045 10.1641L32.8028 16.0234L27.8809 12.4141L22.9122 15.8594L24.8341 10.0938L19.9825 6.41406L26.0528 6.46094ZM45.9728 6.46094L47.965 0.695312L49.84 6.53125L55.9103 6.64844L50.965 10.1641L52.7228 16.0234L47.8009 12.4141L42.8322 15.8594L44.7541 10.0938L39.9025 6.41406L45.9728 6.46094ZM75.5725 6.48438L70.6272 10L72.385 15.8594L67.4866 12.2734L62.5178 15.6953L64.3694 10.0703V9.90625L59.5647 6.25L65.635 6.29688L67.6272 0.53125L69.5022 6.34375L75.5725 6.48438ZM68.1897 11.2891L70.2053 12.7656L69.2444 9.53125L71.9397 7.58594L68.635 7.53906L67.5803 4.30469V4.375V10.8438L68.1897 11.2891ZM87.4769 0.53125L89.3519 6.34375L95.4222 6.48438L90.4769 10L92.2347 15.8594L87.3363 12.2734L82.3675 15.6953L84.2659 9.92969L79.4144 6.25L85.4847 6.29688L87.4769 0.53125ZM87.4534 4.30469L86.6331 6.67188L86.3284 7.49219L83.0238 7.46875L85.6722 9.48438L84.6409 12.6719L87.3597 10.7734L90.055 12.7656L89.0941 9.53125L91.7894 7.58594L88.4847 7.53906L87.4534 4.30469Z"
+                                 fill="#141414" />
+                           </svg>
+                        </div>
+                        <span class="card__footer_reviews">Reviews (2)</span>
+                     </div>
+                  </div>
+
+               </div>
+         </section>
+
+         <!--------section instagram---------->
+
+         <section class="instagram" id="instagram">
+            <div class="instagram__container">
+               <div class="instagram__title title__slider">
+                  <h6>@shella Follow Us on Instagram</h6>
+               </div>
+               <div class="instagram__slider">
+                  <a href="https://www.instagram.com/" class="instagram__slider_link">
+                     <img src="./img/instagram1.jpg" alt="photo on instagram">
                   </a>
-                  <div class="item-grid__item-info">
-                     <p class="item-grid__subtitle"><a href="">NEW-SEASON ACCESSORIES</a>
+                  <a href="https://www.instagram.com/" class="instagram__slider_link">
+                     <img src="./img/instagram2.jpg" alt="photo on instagram">
+                  </a>
+                  <a href="https://www.instagram.com/" class="instagram__slider_link">
+                     <img src="./img/instagram3.jpg" alt="photo on instagram">
+                  </a>
+                  <a href="https://www.instagram.com/" class="instagram__slider_link">
+                     <img src="./img/instagram4.jpg" alt="photo on instagram">
+                  </a>
+                  <a href="https://www.instagram.com/" class="instagram__slider_link">
+                     <img src="./img/instagram5.jpg" alt="photo on instagram">
+                  </a>
+                  <a href="https://www.instagram.com/" class="instagram__slider_link">
+                     <img src="./img/instagram6.jpg" alt="photo on instagram">
+                  </a>
+                  <a href="https://www.instagram.com/" class="instagram__slider_link">
+                     <img src="./img/instagram3.jpg" alt="photo on instagram">
+                  </a>
+
+               </div>
+            </div>
+         </section>
+
+         <!-- contact -->
+         <section class="contact" id="contact">
+            <div class="contact__container">
+               <div class="contact__body">
+                  <div class="contact__body_column column-subscription">
+                     <h3 class="column-subscription__title contact-title">
+                        NEWSLETTER SUBSCRIPTION
+                     </h3>
+                     <p class="column-subscription__text contact-text"> Sign up for Shella updates to receive
+                        information
+                        about new arrivals, future events and specials.
                      </p>
-                     <button type="button" class="item-grid__button">Discover More</button>
+                     <form class="column-subscription__form contact-form" action="#" method="get">
+                        <input class="contact-form__input" type="email" name="email" id="email"
+                           placeholder="Enter your email address">
+                        <button class="contact-form__btn" type="submit">subscribe!</button>
+                     </form>
                   </div>
-               </div>
-
-               <div class="grid-body__page page-second">
-                  <h2 class="grid-body__title">New season</h2>
-                  <p class="grid-body__text">New arrivals are here!</p>
-                  <button type="button" class="grid-body__btn">Discover More</button>
-               </div>
-
-               <div class="grid-body__item item-grid item-vacation">
-                  <a href="">
-                     <img class="item-grid__img" src="./img/vacation.jpg"
-                        srcset="./img/vacation-md.jpg 278w, ./img/vacation-sm.jpg 186w "
-                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
-                  </a>
-                  <div class="item-grid__item-info">
-                     <p class="item-grid__subtitle"><a href="">The Vacation Shop</a>
+                  <div class="contact__body_column column-help">
+                     <h3 class="column-help__title contact-title">
+                        here to help
+                     </h3>
+                     <p class="column-help__text contact-text"> Have a question? You may find an answer in our FAQs.
+                        But you can also contact us:
                      </p>
-                     <button type="button" class="item-grid__button">Discover More</button>
+
+                     <div class="column-help__block">
+                        <h6 class="column-help__block_title">Customer Services</h6>
+                        <div class="block-center">
+                           <div class="block-center__wrap">
+                              <div class="column-help__block_phone phone block-contact">
+                                 <a href="tel:8001234567">
+                                    <svg viewBox="0 0 17 17">
+                                       <path
+                                          d="M13.6875 16.3555C12.7891 16.3555 11.9167 16.2708 11.0703 16.1016C10.237 15.9323 9.42318 15.6784 8.62891 15.3398C7.83464 14.9883 7.09245 14.5846 6.40234 14.1289C5.71224 13.6602 5.07422 13.1328 4.48828 12.5469C3.90234 11.9479 3.375 11.3034 2.90625 10.6133C2.4375 9.92318 2.03385 9.1875 1.69531 8.40625C1.35677 7.61198 1.09635 6.79167 0.914062 5.94531C0.744792 5.09896 0.660156 4.22656 0.660156 3.32812C0.660156 3.30208 0.660156 3.27604 0.660156 3.25C0.673177 3.21094 0.686198 3.17188 0.699219 3.13281C0.71224 3.10677 0.72526 3.08073 0.738281 3.05469C0.764323 3.01562 0.790365 2.98307 0.816406 2.95703L3.41406 0.359375C3.46615 0.307292 3.52474 0.268229 3.58984 0.242188C3.65495 0.216146 3.72005 0.203125 3.78516 0.203125C3.86328 0.203125 3.92839 0.216146 3.98047 0.242188C4.04557 0.268229 4.10417 0.307292 4.15625 0.359375L7.80859 4.01172C7.86068 4.0638 7.89974 4.1224 7.92578 4.1875C7.95182 4.23958 7.96484 4.30469 7.96484 4.38281C7.96484 4.44792 7.95182 4.51302 7.92578 4.57812C7.89974 4.64323 7.86068 4.70182 7.80859 4.75391L5.5625 6.98047L10.0352 11.4531L12.2812 9.20703C12.3333 9.16797 12.3854 9.13542 12.4375 9.10938C12.5026 9.08333 12.5742 9.07031 12.6523 9.07031C12.7174 9.07031 12.7826 9.08333 12.8477 9.10938C12.9128 9.13542 12.9714 9.16797 13.0234 9.20703L16.6562 12.8594C16.7083 12.9115 16.7474 12.9701 16.7734 13.0352C16.7995 13.1003 16.8125 13.1654 16.8125 13.2305C16.8125 13.3086 16.7995 13.3802 16.7734 13.4453C16.7474 13.4974 16.7083 13.5495 16.6562 13.6016L14.0586 16.2188C14.0326 16.2318 14 16.2513 13.9609 16.2773C13.9349 16.2904 13.9089 16.3034 13.8828 16.3164C13.8438 16.3294 13.8047 16.3424 13.7656 16.3555C13.7396 16.3555 13.7135 16.3555 13.6875 16.3555ZM3.78516 1.47266L1.71484 3.54297C1.72786 4.35026 1.8125 5.13151 1.96875 5.88672C2.13802 6.64193 2.37891 7.37109 2.69141 8.07422C3.00391 8.79036 3.36849 9.46094 3.78516 10.0859C4.21484 10.6979 4.69661 11.2708 5.23047 11.8047C5.7513 12.3385 6.32422 12.8138 6.94922 13.2305C7.57422 13.6471 8.23828 14.0117 8.94141 14.3242C9.64453 14.6367 10.3737 14.8776 11.1289 15.0469C11.8841 15.2161 12.6654 15.3073 13.4727 15.3203L15.5625 13.2305L12.6523 10.3203L10.4062 12.5664C10.3542 12.6185 10.2956 12.6576 10.2305 12.6836C10.1784 12.6966 10.1133 12.7031 10.0352 12.7031C9.97005 12.7031 9.90495 12.6966 9.83984 12.6836C9.77474 12.6576 9.71615 12.6185 9.66406 12.5664L4.46875 7.35156C4.41667 7.29948 4.3776 7.2474 4.35156 7.19531C4.32552 7.13021 4.3125 7.05859 4.3125 6.98047C4.3125 6.91536 4.32552 6.85026 4.35156 6.78516C4.3776 6.72005 4.41667 6.66146 4.46875 6.60938L6.69531 4.38281L3.78516 1.47266Z"
+                                          fill="#141414" />
+                                    </svg>
+                                    <span>Call Us: 800-123-4567</span>
+                                 </a>
+                              </div>
+                              <div class="column-help__block_work work block-contact">
+                                 <svg viewBox="0 0 18 17">
+                                    <path
+                                       d="M12.3789 0.828125C12.8867 1.03646 13.3555 1.29036 13.7852 1.58984C14.2279 1.88932 14.638 2.22786 15.0156 2.60547C15.3932 2.98307 15.7318 3.39323 16.0312 3.83594C16.3307 4.27865 16.5911 4.75391 16.8125 5.26172C17.0339 5.75651 17.1966 6.27734 17.3008 6.82422C17.418 7.35807 17.4766 7.91146 17.4766 8.48438C17.4766 9.07031 17.418 9.63672 17.3008 10.1836C17.1966 10.7174 17.0339 11.2318 16.8125 11.7266C16.5911 12.2344 16.3307 12.7096 16.0312 13.1523C15.7318 13.5951 15.3932 14.0052 15.0156 14.3828C14.638 14.7604 14.2279 15.099 13.7852 15.3984C13.3555 15.6979 12.8867 15.9518 12.3789 16.1602C11.8711 16.3815 11.3438 16.5508 10.7969 16.668C10.263 16.7721 9.70964 16.8242 9.13672 16.8242C8.5638 16.8242 8.00391 16.7721 7.45703 16.668C6.92318 16.5508 6.40234 16.3815 5.89453 16.1602C5.38672 15.9518 4.91146 15.6979 4.46875 15.3984C4.03906 15.099 3.63542 14.7604 3.25781 14.3828C2.88021 14.0052 2.54167 13.5951 2.24219 13.1523C1.94271 12.7096 1.68229 12.2344 1.46094 11.7266C1.23958 11.2318 1.07031 10.7174 0.953125 10.1836C0.848958 9.63672 0.796875 9.07031 0.796875 8.48438C0.796875 7.91146 0.848958 7.35807 0.953125 6.82422C1.07031 6.27734 1.23958 5.75651 1.46094 5.26172C1.68229 4.75391 1.94271 4.27865 2.24219 3.83594C2.54167 3.39323 2.88021 2.98307 3.25781 2.60547C3.63542 2.22786 4.04557 1.88932 4.48828 1.58984C4.93099 1.29036 5.39974 1.03646 5.89453 0.828125C6.40234 0.606771 6.92318 0.44401 7.45703 0.339844C8.00391 0.222656 8.5638 0.164062 9.13672 0.164062C9.70964 0.164062 10.263 0.222656 10.7969 0.339844C11.3438 0.44401 11.8711 0.606771 12.3789 0.828125ZM9.66406 15.75C10.1068 15.724 10.5365 15.6589 10.9531 15.5547C11.3828 15.4375 11.7995 15.2878 12.2031 15.1055C12.5938 14.9232 12.9648 14.7083 13.3164 14.4609C13.668 14.2135 13.9935 13.9401 14.293 13.6406C14.5924 13.3411 14.8594 13.0221 15.0938 12.6836C15.3411 12.332 15.556 11.9544 15.7383 11.5508C15.9336 11.1602 16.0833 10.7565 16.1875 10.3398C16.2917 9.91016 16.3633 9.46745 16.4023 9.01172H14.3516C14.2734 9.01172 14.2018 8.9987 14.1367 8.97266C14.0846 8.94661 14.0326 8.90755 13.9805 8.85547C13.9284 8.80339 13.8893 8.7513 13.8633 8.69922C13.8372 8.63411 13.8242 8.5625 13.8242 8.48438C13.8242 8.41927 13.8372 8.36068 13.8633 8.30859C13.8893 8.24349 13.9284 8.1849 13.9805 8.13281C14.0326 8.08073 14.0846 8.04167 14.1367 8.01562C14.2018 7.98958 14.2734 7.97656 14.3516 7.97656H16.4023C16.3633 7.52083 16.2917 7.08464 16.1875 6.66797C16.0833 6.23828 15.9336 5.82812 15.7383 5.4375C15.556 5.03385 15.3411 4.66276 15.0938 4.32422C14.8594 3.97266 14.5924 3.64714 14.293 3.34766C13.9935 3.04818 13.668 2.77474 13.3164 2.52734C12.9648 2.27995 12.5938 2.0651 12.2031 1.88281C11.7995 1.70052 11.3828 1.55729 10.9531 1.45312C10.5365 1.33594 10.1068 1.26432 9.66406 1.23828V3.28906C9.66406 3.35417 9.65104 3.41927 9.625 3.48438C9.59896 3.54948 9.5599 3.60807 9.50781 3.66016C9.45573 3.69922 9.39714 3.73177 9.33203 3.75781C9.27995 3.78385 9.21484 3.79688 9.13672 3.79688C9.07161 3.79688 9.00651 3.78385 8.94141 3.75781C8.8763 3.73177 8.81771 3.69922 8.76562 3.66016C8.71354 3.60807 8.67448 3.54948 8.64844 3.48438C8.6224 3.41927 8.60938 3.35417 8.60938 3.28906V1.23828C8.16667 1.26432 7.73047 1.33594 7.30078 1.45312C6.88411 1.55729 6.47396 1.70052 6.07031 1.88281C5.67969 2.0651 5.30859 2.27995 4.95703 2.52734C4.60547 2.77474 4.27995 3.04818 3.98047 3.34766C3.68099 3.64714 3.40755 3.97266 3.16016 4.32422C2.92578 4.66276 2.71745 5.03385 2.53516 5.4375C2.35286 5.82812 2.20312 6.23828 2.08594 6.66797C1.98177 7.08464 1.91016 7.52083 1.87109 7.97656H3.92188C4 7.97656 4.0651 7.98958 4.11719 8.01562C4.18229 8.04167 4.24089 8.08073 4.29297 8.13281C4.34505 8.1849 4.38411 8.24349 4.41016 8.30859C4.4362 8.36068 4.44922 8.41927 4.44922 8.48438C4.44922 8.5625 4.4362 8.63411 4.41016 8.69922C4.38411 8.7513 4.34505 8.80339 4.29297 8.85547C4.24089 8.90755 4.18229 8.94661 4.11719 8.97266C4.0651 8.9987 4 9.01172 3.92188 9.01172H1.87109C1.91016 9.46745 1.98177 9.91016 2.08594 10.3398C2.20312 10.7565 2.35286 11.1602 2.53516 11.5508C2.71745 11.9544 2.92578 12.332 3.16016 12.6836C3.40755 13.0221 3.68099 13.3411 3.98047 13.6406C4.27995 13.9401 4.60547 14.2135 4.95703 14.4609C5.30859 14.7083 5.67969 14.9232 6.07031 15.1055C6.47396 15.2878 6.88411 15.4375 7.30078 15.5547C7.73047 15.6589 8.16667 15.724 8.60938 15.75V13.6992C8.60938 13.6341 8.6224 13.569 8.64844 13.5039C8.67448 13.4388 8.71354 13.3802 8.76562 13.3281C8.81771 13.276 8.8763 13.237 8.94141 13.2109C9.00651 13.1849 9.07161 13.1719 9.13672 13.1719C9.21484 13.1719 9.27995 13.1849 9.33203 13.2109C9.39714 13.237 9.45573 13.276 9.50781 13.3281C9.5599 13.3802 9.59896 13.4388 9.625 13.5039C9.65104 13.569 9.66406 13.6341 9.66406 13.6992V15.75ZM12.6328 8.13281C12.6849 8.1849 12.724 8.24349 12.75 8.30859C12.776 8.36068 12.7891 8.41927 12.7891 8.48438C12.7891 8.5625 12.776 8.63411 12.75 8.69922C12.724 8.7513 12.6849 8.80339 12.6328 8.85547C12.5807 8.90755 12.5221 8.94661 12.457 8.97266C12.4049 8.9987 12.3398 9.01172 12.2617 9.01172H9.13672C9.09766 9.01172 9.05859 9.01172 9.01953 9.01172C8.98047 8.9987 8.94141 8.97917 8.90234 8.95312C8.86328 8.9401 8.83073 8.92057 8.80469 8.89453C8.77865 8.86849 8.74609 8.83594 8.70703 8.79688L5.58203 4.63672C5.54297 4.58464 5.51693 4.52604 5.50391 4.46094C5.49089 4.39583 5.48438 4.32422 5.48438 4.24609C5.4974 4.18099 5.52344 4.1224 5.5625 4.07031C5.60156 4.00521 5.64714 3.94661 5.69922 3.89453C5.7513 3.85547 5.8099 3.82943 5.875 3.81641C5.9401 3.80339 6.01172 3.79688 6.08984 3.79688C6.15495 3.8099 6.21354 3.83594 6.26562 3.875C6.33073 3.91406 6.38932 3.95964 6.44141 4.01172L9.39062 7.97656H12.2617C12.3398 7.97656 12.4049 7.98958 12.457 8.01562C12.5221 8.04167 12.5807 8.08073 12.6328 8.13281Z"
+                                       fill="#141414" />
+                                 </svg>
+                                 <div class="work__shedule">
+                                    <p class="work__shedule_mode week">Mon-Fri: 9:00 am - 6:00 pm</p>
+                                    <p class="work__shedule_mode sat">Sat: 9:00 am - 4:00 pm</p>
+                                    <p class="work__shedule_mode sun">Sun: 9:00 am - 2:00 pm</p>
+                                 </div>
+                              </div>
+                              <div class="column-help__block_email email block-contact">
+                                 <a href="mailto:vialife79@gmail.com">
+                                    <svg viewBox="0 0 18 14">
+                                       <path
+                                          d="M17.3984 1.25391C17.3984 1.26693 17.3984 1.27995 17.3984 1.29297C17.4115 1.29297 17.418 1.29948 17.418 1.3125C17.418 1.32552 17.418 1.33854 17.418 1.35156C17.418 1.35156 17.418 1.35807 17.418 1.37109C17.418 1.38411 17.418 1.39714 17.418 1.41016V12.875C17.418 12.9531 17.4049 13.0247 17.3789 13.0898C17.3529 13.1419 17.3203 13.194 17.2812 13.2461C17.2292 13.2982 17.1706 13.3372 17.1055 13.3633C17.0404 13.3893 16.9753 13.4023 16.9102 13.4023H1.28516C1.20703 13.4023 1.13542 13.3893 1.07031 13.3633C1.01823 13.3372 0.966146 13.2982 0.914062 13.2461C0.861979 13.194 0.822917 13.1354 0.796875 13.0703C0.770833 13.0052 0.757812 12.9401 0.757812 12.875V1.41016C0.757812 1.39714 0.764323 1.38411 0.777344 1.37109C0.777344 1.35807 0.777344 1.35156 0.777344 1.35156C0.777344 1.33854 0.777344 1.32552 0.777344 1.3125C0.777344 1.29948 0.777344 1.29297 0.777344 1.29297C0.777344 1.27995 0.783854 1.26693 0.796875 1.25391C0.809896 1.24089 0.816406 1.22786 0.816406 1.21484C0.816406 1.20182 0.816406 1.19531 0.816406 1.19531C0.829427 1.18229 0.835938 1.16927 0.835938 1.15625C0.848958 1.14323 0.855469 1.13672 0.855469 1.13672C0.855469 1.1237 0.855469 1.11719 0.855469 1.11719C0.86849 1.11719 0.875 1.11719 0.875 1.11719C0.875 1.10417 0.875 1.09766 0.875 1.09766C0.888021 1.09766 0.894531 1.09766 0.894531 1.09766C0.894531 1.08464 0.894531 1.07812 0.894531 1.07812C0.907552 1.0651 0.914062 1.05208 0.914062 1.03906C0.927083 1.03906 0.933594 1.03906 0.933594 1.03906C0.946615 1.02604 0.959635 1.01953 0.972656 1.01953C0.972656 1.00651 0.972656 1 0.972656 1C0.985677 0.986979 0.998698 0.980469 1.01172 0.980469C1.02474 0.967448 1.03776 0.960938 1.05078 0.960938C1.0638 0.960938 1.07031 0.960938 1.07031 0.960938C1.08333 0.947917 1.08984 0.941406 1.08984 0.941406C1.10286 0.941406 1.10938 0.941406 1.10938 0.941406C1.1224 0.928385 1.12891 0.921875 1.12891 0.921875C1.14193 0.921875 1.15495 0.921875 1.16797 0.921875C1.18099 0.921875 1.1875 0.921875 1.1875 0.921875C1.20052 0.921875 1.20703 0.921875 1.20703 0.921875C1.22005 0.908854 1.23307 0.902344 1.24609 0.902344C1.25911 0.902344 1.27214 0.902344 1.28516 0.902344H16.9102C16.9232 0.902344 16.9297 0.902344 16.9297 0.902344C16.9427 0.902344 16.9557 0.908854 16.9688 0.921875C16.9818 0.921875 16.9883 0.921875 16.9883 0.921875C17.0013 0.921875 17.0078 0.921875 17.0078 0.921875C17.0208 0.921875 17.0339 0.921875 17.0469 0.921875C17.0599 0.921875 17.0664 0.928385 17.0664 0.941406C17.0794 0.941406 17.0859 0.941406 17.0859 0.941406C17.099 0.941406 17.1055 0.947917 17.1055 0.960938C17.1185 0.960938 17.125 0.960938 17.125 0.960938C17.138 0.960938 17.1445 0.967448 17.1445 0.980469C17.1576 0.980469 17.1706 0.980469 17.1836 0.980469C17.1836 0.980469 17.1836 0.986979 17.1836 1C17.1966 1 17.2096 1.00651 17.2227 1.01953C17.2227 1.01953 17.2292 1.02604 17.2422 1.03906C17.2552 1.03906 17.2617 1.03906 17.2617 1.03906C17.2617 1.05208 17.2617 1.0651 17.2617 1.07812C17.2747 1.07812 17.2878 1.07812 17.3008 1.07812C17.3008 1.07812 17.3008 1.08464 17.3008 1.09766C17.3008 1.09766 17.3008 1.10417 17.3008 1.11719C17.3138 1.11719 17.3203 1.11719 17.3203 1.11719C17.3203 1.11719 17.3203 1.1237 17.3203 1.13672C17.3333 1.13672 17.3398 1.14323 17.3398 1.15625C17.3529 1.16927 17.3594 1.18229 17.3594 1.19531C17.3724 1.19531 17.3789 1.20182 17.3789 1.21484C17.3789 1.22786 17.3789 1.24089 17.3789 1.25391C17.3919 1.25391 17.3984 1.25391 17.3984 1.25391ZM16.3828 12.3477V2.44531L9.41016 7.5625C9.38411 7.58854 9.35807 7.60807 9.33203 7.62109C9.30599 7.62109 9.27995 7.6276 9.25391 7.64062C9.22786 7.65365 9.20182 7.66016 9.17578 7.66016C9.14974 7.66016 9.1237 7.66016 9.09766 7.66016C9.07161 7.66016 9.03906 7.66016 9 7.66016C8.97396 7.66016 8.94792 7.65365 8.92188 7.64062C8.89583 7.6276 8.86979 7.62109 8.84375 7.62109C8.83073 7.60807 8.8112 7.58854 8.78516 7.5625L1.79297 2.44531V12.3477H16.3828ZM2.86719 1.9375L9.09766 6.48828L15.3086 1.9375H2.86719Z"
+                                          fill="#141414" />
+                                    </svg>
+                                    <span>Send us an email</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="contact__body_column column-information">
+                     <div class="column-information__box box">
+                        <h3 class="column-information__title contact-title">
+                           information
+                        </h3>
+                        <ul class="box__list">
+                           <li class="box__list_item"><a href="">About us</a></li>
+                           <li class="box__list_item"><a href="">Customer Service</a></li>
+                           <li class="box__list_item"><a href="">Blog</a></li>
+                           <li class="box__list_item"><a href="">Page 404</a></li>
+                           <li class="box__list_item"><a href="">Sizing Guide</a></li>
+                           <li class="box__list_item"><a href="">FAQs</a></li>
+                           <li class="box__list_item"><a href="">Contact Us</a></li>
+                           <li class="box__list_item"><a href="">Documentation</a></li>
+                        </ul>
+                     </div>
+                     <div class="column-information__box box">
+                        <h3 class="column-information__title contact-title">
+                           order
+                        </h3>
+                        <ul class="box__list">
+                           <li class="box__list_item"><a href="">My Account</a></li>
+                           <li class="box__list_item"><a href="">View Bag</a></li>
+                           <li class="box__list_item"><a href="">Wishlist</a></li>
+                           <li class="box__list_item"><a href="">Compare</a></li>
+                        </ul>
+                     </div>
                   </div>
                </div>
+            </div>
+         </section>
 
-               <div class="grid-body__item item-grid item-bomber">
-                  <a href="">
-                     <img class="item-grid__img img-midlle" src="./img/bomber.jpg"
-                        srcset="./img/bomber-md.jpg 578w, ./img/bomber-sm.jpg 386w "
-                        sizes="(max-width: 420px) 386px, (max-width: 790px) 578px, 770px" alt="bomber">
+         <section class="follow-us">
+            <div class="follow-us__body">
+               <h3 class="follow-us__title contact-title">follow us</h3>
+               <div class="follow-us__social social">
+                  <a href="https://www.facebook.com/" target="_blank" title="facebook">
+                     <svg class="social__icon" viewBox="0 0 32 32">
+                        <path fill-rule="evenodd" fill="#000"
+                           d="M16.0,31.999 C7.163,31.999 0.0,24.836 0.0,15.999 C0.0,7.163 7.163,0.0 16.0,0.0 C24.836,0.0 32.0,7.163 32.0,15.999 C32.0,24.836 24.836,31.999 16.0,31.999 ZM20.0,9.999 L22.0,9.999 L22.0,5.999 C22.0,5.999 22.0,5.999 18.125,5.999 C14.251,5.999 15.0,9.999 15.0,9.999 L15.0,13.0 L13.0,13.0 L13.0,17.0 L15.0,17.0 L15.0,26.0 L19.0,26.0 L19.0,17.0 L21.0,17.0 L22.0,13.0 L19.0,13.0 C19.0,13.0 19.0,11.820 19.0,10.999 C19.0,10.178 20.0,9.999 20.0,9.999 Z" />
+                     </svg>
                   </a>
-                  <div class="item-grid__item-info">
-                     <p class="item-grid__subtitle"><a href="">This season's bomber jackets</a> </p>
-                     <button type="button" class="item-grid__button">Discover More</button>
-                  </div>
-               </div>
 
-               <div class="grid-body__page page-third">
-                  <h2 class="grid-body__title">TOUCH
-                     OF COLOR</h2>
-                  <p class="grid-body__text">Essential styles come alive in bright colours.</p>
-                  <button type="button" class="grid-body__btn">Discover More</button>
-               </div>
-
-               <div class="grid-body__item item-grid item-model">
-                  <a href="">
-                     <img class="item-grid__img" src="./img/model.jpg"
-                        srcset="./img/model-md.jpg 278w, ./img/model-sm.jpg 186w "
-                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                  <a href="https://www.instagram.com/" target="_blank" title="instagram">
+                     <svg class=" social__icon" viewBox="0 0 32 32">
+                        <path fill="#000"
+                           d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                        </path>
+                        <path
+                           d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                        </path>
+                        <path
+                           d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                        </path>
+                     </svg>
                   </a>
-                  <div class="item-grid__item-info">
-                     <p class="item-grid__subtitle"><a href="">NEW ICONIC MODEL</a>
-                     </p>
-                     <button type="button" class="item-grid__button">Discover More</button>
-                  </div>
-               </div>
 
-               <div class="grid-body__item item-grid item-skirts">
-                  <a href="">
-                     <img class="item-grid__img" src="./img/skirts.jpg"
-                        srcset="./img/skirts-md.jpg 278w, ./img/skirts-sm.jpg 186w "
-                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                  <a href="https://twitter.com/" target="_blank" title="twitter">
+                     <svg class="social__icon" viewBox="0 0 32 32">
+                        <path fill-rule="evenodd" fill="#000"
+                           d="M16.0,31.999 C7.163,31.999 0.0,24.836 0.0,15.999 C0.0,7.163 7.163,0.0 16.0,0.0 C24.836,0.0 32.0,7.163 32.0,15.999 C32.0,24.836 24.836,31.999 16.0,31.999 ZM25.399,8.606 C24.685,9.68 23.895,9.405 23.54,9.586 C22.380,8.801 21.420,8.310 20.358,8.310 C18.318,8.310 16.665,10.119 16.665,12.349 C16.665,12.666 16.697,12.974 16.760,13.270 C13.691,13.102 10.969,11.493 9.148,9.50 C8.830,9.646 8.648,10.340 8.648,11.80 C8.648,12.482 9.300,13.718 10.291,14.443 C9.686,14.422 9.116,14.240 8.618,13.938 C8.618,13.954 8.618,13.971 8.618,13.988 C8.618,15.945 9.891,17.578 11.580,17.950 C11.270,18.42 10.944,18.91 10.607,18.91 C10.369,18.91 10.138,18.66 9.913,18.18 C10.382,19.623 11.746,20.791 13.363,20.824 C12.99,21.907 10.506,22.553 8.776,22.553 C8.478,22.553 8.184,22.534 7.895,22.497 C9.529,23.643 11.470,24.311 13.556,24.311 C20.349,24.311 24.64,18.156 24.64,12.818 C24.64,12.643 24.60,12.469 24.53,12.295 C24.775,11.726 25.401,11.15 25.896,10.204 C25.234,10.525 24.522,10.743 23.775,10.840 C24.538,10.340 25.123,9.549 25.399,8.606 Z" />
+                     </svg>
                   </a>
-                  <div class="item-grid__item-info">
-                     <p class="item-grid__subtitle"><a href="">'90s LOVE: THE DENIM SKIRT</a>
-                     </p>
-                     <button type="button" class="item-grid__button">Discover More</button>
-                  </div>
-               </div>
 
-               <div class="grid-body__item item-grid item-all">
-                  <a href="">
-                     <img class="item-grid__img" src="./img/all.jpg"
-                        srcset="./img/all-md.jpg 278w, ./img/all-sm.jpg 186w "
-                        sizes="(max-width: 420px) 186px, (max-width: 790px) 278px, 370px" alt="Pants & T-shirts">
+                  <a href="https://www.linkedin.com/" target="_blank" title="linkedin">
+                     <svg class="social__icon" viewBox="0 0 32 32">
+                        <path fill-rule="evenodd" fill="#000"
+                           d="M16.0,31.999 C7.163,31.999 0.0,24.836 0.0,15.999 C0.0,7.163 7.163,0.0 16.0,0.0 C24.836,0.0 32.0,7.163 32.0,15.999 C32.0,24.836 24.836,31.999 16.0,31.999 ZM9.788,7.468 C9.467,7.156 9.82,6.999 8.633,6.999 C8.185,6.999 7.802,7.153 7.484,7.459 C7.166,7.765 7.7,8.135 7.7,8.568 C7.7,9.18 7.167,9.401 7.488,9.717 C7.809,10.32 8.197,10.190 8.652,10.190 C9.95,10.190 9.475,10.35 9.792,9.726 C10.110,9.416 10.269,9.42 10.269,8.603 C10.269,8.159 10.109,7.780 9.788,7.468 ZM10.274,10.993 L7.0,10.993 L7.0,22.999 L10.274,22.999 L10.274,10.993 ZM25.0,15.437 C25.0,14.17 24.510,12.944 23.648,12.219 C22.624,11.364 21.613,10.938 20.144,10.938 C19.428,10.938 18.963,11.53 18.279,11.284 C17.594,11.516 16.848,12.2 16.4,12.593 L16.4,10.993 L12.730,10.993 L12.730,22.999 L15.987,22.997 L15.987,18.640 C15.987,17.357 16.42,16.523 16.150,16.138 C16.359,15.398 16.732,14.819 17.271,14.400 C17.810,13.980 18.456,13.771 19.208,13.771 C19.788,13.771 20.274,13.897 20.668,14.151 C21.63,14.404 21.339,14.771 21.497,15.255 C21.656,15.738 21.735,16.715 21.735,18.187 L21.735,22.997 L25.0,22.997 L25.0,15.437 Z" />
+                     </svg>
                   </a>
-                  <div class="item-grid__item-info">
-                     <p class="item-grid__subtitle"><a href="">40% OFF ALL</a>
-                     </p>
-                     <button type="button" class="item-grid__button">Discover More</button>
-                  </div>
                </div>
+            </div>
+         </section>
 
+      </main>
 
+      <footer class="footer">
+         <div class="footer__body">
+            <p class="footer__text">© 2018 Shella Fashion Store Shopify. All Rights Reserved. Ecommerce Software by
+               Shopify. Shopify Theme by Themetony.</p>
+            <div class="footer__icons">
+               <a href="#"><img src="./img/paypal.jpg" alt="paypal"></a>
+               <a href="#"><img src="./img/master.jpg" alt="master"></a>
+               <a href="#"><img src="./img/maestro.jpg" alt="maestro"></a>
+               <a href="#"><img src="./img/discover.jpg" alt="discover"></a>
+               <a href="#"><img src="./img/american_express.jpg" alt="american_express"></a>
+               <a href="#"><img src="./img/jcb.jpg" alt="jcb"></a>
+               <a href="#"><img src="./img/diners_club.jpg" alt="diners_club"></a>
+               <a href="#"><img src="./img/apple_pay.jpg" alt="apple_pay"></a>
+               <a href="#"><img src="./img/google_pay.jpg" alt="google_pay"></a>
             </div>
          </div>
-      </section>
+      </footer>
+   </div>
 
-
-
-
-   </main>
-
-
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="./script.js"></script>
+   <script src=" https://code.jquery.com/jquery-3.6.0.min.js">
+   </script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   <script type="text/javascript" src="slick/slick.min.js"></script>
+   <script src="./js/script.js"></script>
 </body>
 
 </html>
